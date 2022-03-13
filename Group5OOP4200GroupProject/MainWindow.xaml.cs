@@ -24,5 +24,30 @@ namespace Group5OOP4200GroupProject
         {
             InitializeComponent();
         }
+
+        private void quitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void guideButton_Click(object sender, RoutedEventArgs e)
+        {
+            string guideMessage ="";
+
+            MessageBox.Show(guideMessage);
+        }
+
+        private void statsButton_Click(object sender, RoutedEventArgs e)
+        {
+            string statsMessage = "";
+            MessageBox.Show(statsMessage);
+        }
+
+        private void playButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            GameWindow gw = new GameWindow();
+            gw.ShowDialog();
+        }
     }
 }

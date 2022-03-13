@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Margin="224,287,0,0" VerticalAlignment="Top" Height="72" Width="133" Click="playButton_Click"/>
+        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="483,287,0,0" VerticalAlignment="Top" Height="72" Width="133" Click="quitButton_Click"/>
+        <Button x:Name="guideButton" Content="User Guide" HorizontalAlignment="Left" Margin="716,0,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="guideButton_Click"/>
+        <Button x:Name="statsButton" Content="Statistics" HorizontalAlignment="Left" Margin="632,0,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="statsButton_Click"/>
+        <Label Content="Go Fish" HorizontalAlignment="Left" Margin="400,112,0,0" VerticalAlignment="Top" Height="27" Width="55"/>
 
     </Grid>
 </Window>
