@@ -12,7 +12,7 @@ namespace MajorProjectTesting
         //              Suits
         public enum suit
         {
-            diamonds = 1,
+            Diamonds = 1,
             Clubs = 2,
             Hearts = 3,
             Spades = 4,
