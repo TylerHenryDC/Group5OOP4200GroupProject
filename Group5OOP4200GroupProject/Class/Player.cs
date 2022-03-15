@@ -18,7 +18,7 @@ namespace Group5OOP4200GroupProject.Class
         /// Initialize the player
         /// </summary>
         /// <param name="id">Player id</param>
-        Player(int id)
+        public Player(int id)
         {
             this.id = id;
         }
