@@ -21,6 +21,7 @@ namespace Group5OOP4200GroupProject.Class
         public Player(int id)
         {
             this.id = id;
+            hand = new List<Card>();
         }
 
         // Methods
