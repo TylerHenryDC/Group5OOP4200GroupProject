@@ -53,6 +53,22 @@ namespace Group5OOP4200GroupProject.Class
             hand.Remove(card);
         }
 
+        /// <summary>
+        /// Debug method for checking cards in hand
+        /// </summary>
+        /// <returns>String with cards in hand</returns>
+        public String ShowHand()
+        {
+            string playerCards = "Player: " + id + "\n";
+
+            foreach(Card card in hand)
+            {
+                playerCards += card.cardValue + " of " + card.cardSuit + "\n";
+            }
+
+            return playerCards;
+        }
+
         // Properties
 
         /// <summary>
