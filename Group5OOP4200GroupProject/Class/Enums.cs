@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MajorProjectTesting
+namespace Group5OOP4200GroupProject.Class
 {
     // Enums for adding the corrent number of cards for a deck
     public static class Enums
