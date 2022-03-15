@@ -9,7 +9,7 @@ namespace Group5OOP4200GroupProject.Class
     class Player
     {
         // Class Variables
-        protected List<Card> hand;
+        protected List<Card> hand { get; set; }
         protected int id;
 
         //Constructors

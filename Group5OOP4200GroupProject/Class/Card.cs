@@ -10,5 +10,6 @@ namespace Group5OOP4200GroupProject.Class
     {
         public Enums.suit cardSuit { get; set; }
         public Enums.value cardValue { get; set; }
+
     }
 }
