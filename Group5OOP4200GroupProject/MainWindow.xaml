@@ -11,6 +11,7 @@
         ResizeMode="NoResize"
         FontFamily="Candara " FontStyle="Normal"
         FontWeight="Light"
+        Icon ="Images/logo.ico"
 
         Title="Go Fish!" Height="550" Width="900">
     <Window.Resources>
