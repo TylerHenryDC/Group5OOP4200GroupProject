@@ -5,13 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group5OOP4200GroupProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        FontSize="26" 
+        Background="#EBEAEA"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        FontFamily="Candara " FontStyle="Normal"
+        FontWeight="Light"
+
+        Title="Go Fish!" Height="550" Width="900">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#CCCCCC"/>
+
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#353535"/>
+        </Style>
+        
+    </Window.Resources>
     <Grid>
-        <Button x:Name="playButton" Content="Play" HorizontalAlignment="Left" Margin="224,287,0,0" VerticalAlignment="Top" Height="72" Width="133" Click="playButton_Click"/>
-        <Button x:Name="quitButton" Content="Quit" HorizontalAlignment="Left" Margin="483,287,0,0" VerticalAlignment="Top" Height="72" Width="133" Click="quitButton_Click"/>
-        <Button x:Name="guideButton" Content="User Guide" HorizontalAlignment="Left" Margin="716,0,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="guideButton_Click"/>
-        <Button x:Name="statsButton" Content="Statistics" HorizontalAlignment="Left" Margin="632,0,0,0" VerticalAlignment="Top" Height="37" Width="84" Click="statsButton_Click"/>
-        <Label Content="Go Fish" HorizontalAlignment="Left" Margin="400,112,0,0" VerticalAlignment="Top" Height="27" Width="55"/>
+        <Button x:Name="playButton" 
+                Content="Play" 
+                HorizontalAlignment="Left" 
+                Margin="250,330,0,0" 
+                VerticalAlignment="Top"
+                Height="75" Width="150" 
+                Click="playButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Button x:Name="quitButton" 
+                Content="Quit" 
+                HorizontalAlignment="Left" 
+                Margin="500,330,0,0" 
+                VerticalAlignment="Top" 
+                Height="75" Width="150" 
+                Click="quitButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Button x:Name="guideButton" 
+                Content="User Guide" 
+                HorizontalAlignment="Right" 
+                Height="54"
+                Width="120"
+                FontSize="23"
+                VerticalAlignment="Top" 
+                Click="guideButton_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Label Content="Go Fish" 
+               Foreground="#353535"
+               Margin="0,0,0, 100"
+               HorizontalAlignment="Center" 
+               FontSize="40"
+               VerticalAlignment="Center" 
+               />
+       
 
     </Grid>
 </Window>
