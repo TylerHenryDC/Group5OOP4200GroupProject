@@ -5,8 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group5OOP4200GroupProject"
         mc:Ignorable="d"
-        Title="GameWindow" Height="450" Width="800">
+        FontSize="26" 
+        Background="#EBEAEA"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        FontFamily="Candara " FontStyle="Normal"
+        FontWeight="Light"
+        Icon ="Images/logo.ico"
+        Title="Go Fish!" Height="700" Width="900" Closing="Window_Closing">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#CCCCCC"/>
+
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#353535"/>
+        </Style>
+
+    </Window.Resources>
     <Grid>
-        
+        <StackPanel  VerticalAlignment="Top" Orientation="Vertical">
+            <Image
+            Width="100"
+            Source="/Images/player1.png"/>
+            <Label Width="100" Height="41" Content=" Player 2"/>
+        </StackPanel>
+        <StackPanel  VerticalAlignment="Bottom" 
+                     HorizontalAlignment="Center"
+                     Orientation="Vertical">
+            <Image
+            Width="100"
+            Source="/Images/player4.png"/>
+            <Label Width="100" Height="41" Content="    You "/>
+        </StackPanel>
+        <StackPanel  HorizontalAlignment="Left" 
+                     Orientation="Vertical"
+                     VerticalAlignment="Center">
+            <Image
+            Width="100"
+            Source="/Images/player3.png"/>
+            <Label Width="100" Height="41" Content=" Player 1"/>
+        </StackPanel>
+        <StackPanel  VerticalAlignment="Center" 
+                     Orientation="Vertical"
+                     HorizontalAlignment="Right">
+            <Image
+            Width="100"
+            Source="/Images/player2.png"/>
+            <Label Width="100" Height="41" Content=" Player 3"/>
+        </StackPanel>
+        <Button x:Name="guideButton" 
+                Content="User Guide" 
+                HorizontalAlignment="Right" 
+                Height="54"
+                Width="120"
+                FontSize="23"
+                VerticalAlignment="Top" Click="guideButton_Click" 
+                >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+        <Image HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                    Margin="0, 3, 0, 0"
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image HorizontalAlignment="Center"
+               Margin="0, 6, 0, 0"
+                   VerticalAlignment="Center" 
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image HorizontalAlignment="Center" 
+               Margin="0, 9, 0, 0"
+                   VerticalAlignment="Center" 
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image HorizontalAlignment="Center" 
+               Margin="0, 12, 0, 0"
+                   VerticalAlignment="Center" 
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image HorizontalAlignment="Center"
+               Margin="0, 15, 0, 0"
+                   VerticalAlignment="Center" 
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image HorizontalAlignment="Center" 
+               Margin="0, 18, 0, 0"
+                   VerticalAlignment="Center" 
+                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+
     </Grid>
 </Window>

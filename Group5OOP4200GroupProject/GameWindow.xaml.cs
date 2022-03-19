@@ -32,5 +32,18 @@ namespace Group5OOP4200GroupProject
             deck.deal(ref Players);
             Debug.WriteLine(Player1.ShowHand());
         }
+
+        private void guideButton_Click(object sender, RoutedEventArgs e)
+        {
+            string guideMessage = "";
+
+            MessageBox.Show(guideMessage);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBox.Show("Do you want to close?");
+            
+        }
     }
 }
