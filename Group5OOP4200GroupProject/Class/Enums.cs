@@ -29,5 +29,13 @@ namespace Group5OOP4200GroupProject.Class
             Queen = 12,
             King = 13,
         }
+
+        // AI Difficulty
+        public enum difficulty
+        {
+            Easy = 1,
+            Medium = 2,
+            Hard = 3
+        }
     }
 }
