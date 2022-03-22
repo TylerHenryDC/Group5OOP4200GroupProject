@@ -43,6 +43,7 @@ namespace Group5OOP4200GroupProject
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             MessageBox.Show("Do you want to close?");
+            Environment.Exit(0); 
             
         }
     }
