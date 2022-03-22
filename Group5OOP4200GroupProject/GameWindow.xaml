@@ -89,9 +89,178 @@
                    VerticalAlignment="Center" 
                    Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image HorizontalAlignment="Center" 
-               Margin="0, 18, 0, 0"
-                   VerticalAlignment="Center" 
-                   Height="70" Source="/Images/Cards/backside90.jpg"/>
+               Margin="0,316,0,0"
+                   VerticalAlignment="Top" 
+                   Height="70" Source="/Images/Cards/backside90.jpg" Width="100"/>
+        <Image x:Name="Card13"
+            HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="626,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="580,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card9"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="547,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="513,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="476,436,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="452,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="406,440,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="373,435,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="339,435,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="302,431,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card8"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="269,435,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="235,435,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="Card12"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="198,431,0,0" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.738"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
