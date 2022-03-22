@@ -12,6 +12,8 @@ namespace Group5OOP4200GroupProject.Class
         protected List<Card> hand;
         protected int id;
 
+        private int score; // Score for the player
+
         //Constructors
 
         /// <summary>
@@ -24,6 +26,16 @@ namespace Group5OOP4200GroupProject.Class
             hand = new List<Card>();
         }
 
+        // Accessor
+        /// <summary>
+        /// Returns the score of the player
+        /// </summary>
+        /// <returns>The score of the player</returns>
+        public int getScore()
+        {
+            return score;
+        }
+
         // Methods
 
         /// <summary>
@@ -33,7 +45,18 @@ namespace Group5OOP4200GroupProject.Class
         /// <returns>True if found false if not</returns>
         public bool checkHand(Card card)
         {
-            return hand.Contains(card);
+            // Bool for if the card was found or not
+            bool found = false;
+            // Loops through the hand of cards
+            for (int i = 0; i < hand.Count; i++)
+            { 
+                // Checks for a matching card value
+                if (hand[i].cardValue == card.cardValue)
+                {
+                    found = true;
+                }
+            }
+            return found;
         }
 
         /// <summary>
@@ -55,6 +78,14 @@ namespace Group5OOP4200GroupProject.Class
         }
 
         /// <summary>
+        ///  Adds 1 to the score of the player
+        /// </summary>
+        public void addToScore()
+        {
+            this.score++;
+        }
+
+        /// <summary>
         /// Debug method for checking cards in hand
         /// </summary>
         /// <returns>String with cards in hand</returns>
@@ -62,7 +93,7 @@ namespace Group5OOP4200GroupProject.Class
         {
             string playerCards = "Player: " + id + "\n";
 
-            foreach(Card card in hand)
+            foreach (Card card in hand)
             {
                 playerCards += card.cardValue + " of " + card.cardSuit + "\n";
             }
