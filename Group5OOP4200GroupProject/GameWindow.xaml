@@ -147,7 +147,7 @@
         <Image x:Name="Card5"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="476,440,0,0" RenderTransformOrigin="0.5,0.5">
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="480,440,0,0" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -160,7 +160,7 @@
         <Image x:Name="Card3"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="452,440,0,0" RenderTransformOrigin="0.5,0.5">
+            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="446,440,0,0" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
