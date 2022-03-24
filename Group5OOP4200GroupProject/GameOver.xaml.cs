@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Group5OOP4200GroupProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GameOver.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameOver : Window
     {
-        public MainWindow()
+        public GameOver()
         {
             InitializeComponent();
         }
@@ -30,20 +29,7 @@ namespace Group5OOP4200GroupProject
             Close();
         }
 
-        private void guideButton_Click(object sender, RoutedEventArgs e)
-        {
-            string guideMessage ="";
-
-            MessageBox.Show(guideMessage);
-        }
-
-        private void statsButton_Click(object sender, RoutedEventArgs e)
-        {
-            string statsMessage = "";
-            MessageBox.Show(statsMessage);
-        }
-
-        private void playButton_Click(object sender, RoutedEventArgs e)
+        private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
             GameWindow gw = new GameWindow();
