@@ -37,11 +37,6 @@ namespace Group5OOP4200GroupProject
             MessageBox.Show(guideMessage);
         }
 
-        private void statsButton_Click(object sender, RoutedEventArgs e)
-        {
-            string statsMessage = "";
-            MessageBox.Show(statsMessage);
-        }
 
         private void playButton_Click(object sender, RoutedEventArgs e)
         {

@@ -39,22 +39,6 @@
         </Button>
         <Label Content="" HorizontalAlignment="Left" Margin="264,229,0,0" VerticalAlignment="Top" Height="40" Width="300"/>
         <Image Source="/Images/gameOver.png"  HorizontalAlignment="Left" Height="150" Margin="346,63,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.326,0.747"/>
-        <Button x:Name="statButton" 
-            Content="Statistics" 
-            HorizontalAlignment="Right" 
-            Height="54"
-            Width="120"
-            FontSize="23"
-            VerticalAlignment="Top" 
-            Click="statsButton_Click" Margin="0,0,10,0">
-
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="10"/>
-                </Style>
-            </Button.Resources>
-
-        </Button>
 
     </Grid>
 </Window>
