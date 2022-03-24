@@ -64,7 +64,7 @@ namespace Group5OOP4200GroupProject.Class
         /// Checks if the hand of a player is empty
         /// </summary>
         /// <returns>true if the players hand is empty false if not</returns>
-        public bool handIsEmpty()
+        public bool isHandEmpty()
         {
             // Checks the number of cards in the hand of the player
             if (hand.Count == 0)
