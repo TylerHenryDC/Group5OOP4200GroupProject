@@ -9,8 +9,9 @@
     <Grid Height="684.04">
         <Button x:Name="playAgainButton" 
             Content="Play Again!" 
+            FontSize="23"
             HorizontalAlignment="Left" 
-            Margin="175,228,0,0" 
+            Margin="190,300,0,0" 
             VerticalAlignment="Top"
             Height="74" Width="150" Click="playAgainButton_Click" 
             >
@@ -22,9 +23,10 @@
 
         </Button>
         <Button x:Name="quitButton" 
-            Content="Quit" 
+            Content="Quit"
+            FontSize="23"
             HorizontalAlignment="Left" 
-            Margin="461,228,0,0" 
+            Margin="500,300,0,0" 
             VerticalAlignment="Top" 
             Height="75" Width="150" 
             Click="quitButton_Click" RenderTransformOrigin="-0.093,-1.246">
@@ -35,7 +37,8 @@
             </Button.Resources>
 
         </Button>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="264,154,0,0" VerticalAlignment="Top" Height="40" Width="231"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="264,229,0,0" VerticalAlignment="Top" Height="40" Width="300"/>
+        <Image Source="/Images/gameOver.png"  HorizontalAlignment="Left" Height="150" Margin="346,63,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.326,0.747"/>
 
     </Grid>
 </Window>
