@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Group5OOP4200GroupProject.Class
+
 {
     class Player
     {
@@ -49,7 +50,7 @@ namespace Group5OOP4200GroupProject.Class
             bool found = false;
             // Loops through the hand of cards
             for (int i = 0; i < hand.Count; i++)
-            { 
+            {
                 // Checks for a matching card value
                 if (hand[i].cardValue == card.cardValue)
                 {
@@ -57,6 +58,25 @@ namespace Group5OOP4200GroupProject.Class
                 }
             }
             return found;
+        }
+
+        /// <summary>
+        /// Checks if the hand of a player is empty
+        /// </summary>
+        /// <returns>true if the players hand is empty false if not</returns>
+        public bool handIsEmpty()
+        {
+            // Checks the number of cards in the hand of the player
+            if (hand.Count == 0)
+            {
+                // The hand is empty
+                return true;
+            }
+            else 
+            {
+                // The hand is not empty
+                return false;
+            }
         }
 
         /// <summary>
