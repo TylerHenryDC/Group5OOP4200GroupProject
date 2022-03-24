@@ -37,8 +37,12 @@ namespace Group5OOP4200GroupProject.Class
             return score;
         }
 
-        // Returns a card a passed index
-        public Card getCardByIndex(int index) 
+        /// <summary>
+        /// Returns a card a passed index (Not removed)
+        /// </summary>
+        /// <param name="index">The index of the card in the players hand</param>
+        /// <returns>The card at the passed index</returns>
+        public Card getCardByIndex(int index)
         {
             return hand[index];
         }
