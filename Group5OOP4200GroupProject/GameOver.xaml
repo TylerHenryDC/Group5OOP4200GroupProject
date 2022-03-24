@@ -35,6 +35,7 @@
             </Button.Resources>
 
         </Button>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="264,154,0,0" VerticalAlignment="Top" Height="40" Width="231"/>
 
     </Grid>
 </Window>
