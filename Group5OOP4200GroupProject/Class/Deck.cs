@@ -77,5 +77,15 @@ namespace Group5OOP4200GroupProject.Class
             }
         }
 
+        /// <summary>
+        /// Check for an empty deck
+        /// </summary>
+        /// <returns>True if empty. False if not</returns>
+        public bool isEmpty()
+        {
+            return cards.Count == 0;
     }
+
+    }
+
 }

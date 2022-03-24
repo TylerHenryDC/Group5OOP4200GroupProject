@@ -68,7 +68,7 @@ namespace Group5OOP4200GroupProject
                     // Turn Flag
                     bool isTurn = true;
                    // While they have cards or till turn is done
-                   while(isTurn && player.isHandEmpty())
+                   while(isTurn && !player.isHandEmpty())
                    {
                         // Get Card and player to ask for
                         Player playerToAsk = player.pickRandomPlayer(players);
@@ -77,7 +77,7 @@ namespace Group5OOP4200GroupProject
                         // Check if payer has card in hand
                         if(playerToAsk.checkHand(cardToAsk))
                         {
-                            // Remove card form  both players hand 
+                            // Remove card form  both players hand
                             player.removeCard(cardToAsk);
                             playerToAsk.removeCard(cardToAsk);
 
@@ -86,41 +86,77 @@ namespace Group5OOP4200GroupProject
 
                             // Check for empty hand
                             if (player.isHandEmpty())
-                            {
-                                // Draw new hand
-                                for (int i = 0; i < 7; i++)
+                            { 
+                                // Draw new hand if deck has cards 
+                                if (!deck.isEmpty())
                                 {
-                                    player.addCard(deck.drawCard());
+                                    // Draw new hand
+                                    for (int i = 0; i < 7; i++)
+                                    {
+                                        // Make sure there are cards before drawing
+                                        if (!deck.isEmpty())
+                                        {
+                                            player.addCard(deck.drawCard());
+                                        }
+                                    }
+                                }
+                                // End AI turn
+                                else
+                                {
+                                    isTurn = false;
                                 }
                             }
                         }
                         else 
                         {
-                            // Draw a card
-                            Card drawnCard = deck.drawCard();
-                            
-                            // Check if card is in asking palyers hand
-                            if (player.checkHand(drawnCard))
-                            {
-                                // Remove the card from hand and increase score
-                                player.removeCard(cardToAsk);
-                                player.addToScore();
+                            // Chenge turen flag
+                            isTurn = false;
 
-                                // Check for empty hand
-                                if(player.isHandEmpty())
+                            // Check deck
+                            if (!deck.isEmpty())
+                            {
+                                // Draw a card
+                                Card drawnCard = deck.drawCard();
+
+                                // Check if card is in asking palyers hand
+                                if (player.checkHand(drawnCard))
                                 {
-                                    // Draw new hand
-                                    for(int i = 0; i < 7; i++)
+                                    // Remove the card from hand and increase score
+                                    player.removeCard(cardToAsk);
+                                    player.addToScore();
+
+                                    // Change turn flag
+                                    isTurn = true;
+
+                                    // Check for empty hand
+                                    if (player.isHandEmpty())
                                     {
-                                        player.addCard(deck.drawCard());
+                                        // Draw new hand if deck has cards 
+                                        if (!deck.isEmpty())
+                                        {
+                                            // Draw new hand
+                                            for (int i = 0; i < 7; i++)
+                                            {
+                                                // Check if deck if empty
+                                                if (!deck.isEmpty())
+                                                {
+                                                    player.addCard(deck.drawCard());
+                                                }
+                                            }
+                                        }
+                                        // End AI turn
+                                        else
+                                        {
+                                            isTurn = false;
+                                        }
                                     }
                                 }
-                            }
-                            else
-                            {
-                                // Add the card to hand and change turn flag
-                                player.addCard(drawnCard);
-                                isTurn = false;
+                                else
+                                {
+                                    // Add the card to hand
+                                    player.addCard(drawnCard);
+                                    
+                                }
                             }
                         }     
                    }
