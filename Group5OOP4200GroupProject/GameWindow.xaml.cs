@@ -20,7 +20,7 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameWindow : Window
     {
-       
+        Card currentCard = new Card();
         public GameWindow()
         {
             InitializeComponent();
@@ -128,55 +128,140 @@ namespace Group5OOP4200GroupProject
 
         private void Card1_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[0];           
+            currentCard = Player1[0];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card2_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[1];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card3_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[2];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card4_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[3];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card5_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[4];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card6_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[5];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card7_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[6];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card8_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[7];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card9_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[8];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card10_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[9];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card11_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[10];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card12_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[11];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card13_Click(object sender, RoutedEventArgs e)
         {
             currentCard = Player1[12];
+            buttonChoosePlayer1.IsEnabled = true;
+            buttonChoosePlayer2.IsEnabled = true;
+            buttonChoosePlayer3.IsEnabled = true;
+        }
+
+        private void buttonChoosePlayer1_Click(object sender, RoutedEventArgs e)
+        {
+            if (Player4.CheckHand(currentCard))
+            {
+                Player1.addCard(currentCard);
+                Player2.removeCard(currentCard);
+            }
+            else
+            {
+                Player1.addCard(deck.drawCard);
+            }
+            buttonChoosePlayer1.IsEnabled = false;
+            buttonChoosePlayer2.IsEnabled = false;
+            buttonChoosePlayer3.IsEnabled = false;
+        }
+        private void buttonChoosePlayer2_Click(object sender, RoutedEventArgs e)
+        {
+            if (Player3.CheckHand(currentCard))
+            {
+                Player1.addCard(currentCard);
+                Player4.removeCard(currentCard);
+            }
+            else
+            {
+                Player3.addCard(deck.drawCard);
+            }
+            buttonChoosePlayer1.IsEnabled = false;
+            buttonChoosePlayer2.IsEnabled = false;
+            buttonChoosePlayer3.IsEnabled = false;
+        }
+        private void buttonChoosePlayer3_Click(object sender, RoutedEventArgs e)
+        {
+            if(Player4.CheckHand(currentCard))
+            {
+                Player1.addCard(currentCard);
+                Player4.removeCard(currentCard);
+            }
+            else
+            {
+                Player1.addCard(deck.drawCard);
+            }
+            buttonChoosePlayer1.IsEnabled = false;
+            buttonChoosePlayer2.IsEnabled = false;
+            buttonChoosePlayer3.IsEnabled = false;
         }
     }
 }
