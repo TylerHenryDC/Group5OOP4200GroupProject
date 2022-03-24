@@ -35,5 +35,11 @@ namespace Group5OOP4200GroupProject
             GameWindow gw = new GameWindow();
             gw.ShowDialog();
         }
+
+        private void statsButton_Click(object sender, RoutedEventArgs e)
+        {
+            string statsMessage = "";
+            MessageBox.Show(statsMessage);
+        }
     }
 }

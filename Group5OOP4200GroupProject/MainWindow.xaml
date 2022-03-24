@@ -21,7 +21,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="#353535"/>
         </Style>
-        
+
     </Window.Resources>
     <Grid>
         <Button x:Name="playButton" 
@@ -75,7 +75,23 @@
                FontSize="40"
                VerticalAlignment="Center" 
                />
-       
+        <Button x:Name="statButton" 
+            Content="Statistics" 
+            HorizontalAlignment="Right" 
+            Height="54"
+            Width="120"
+            FontSize="23"
+            VerticalAlignment="Top" 
+            Click="statsButton_Click" Margin="0,0,146,0">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+
 
     </Grid>
 </Window>

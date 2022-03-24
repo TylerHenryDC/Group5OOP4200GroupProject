@@ -37,6 +37,12 @@ namespace Group5OOP4200GroupProject.Class
             return score;
         }
 
+        // Returns a card a passed index
+        public Card getCardByIndex(int index) 
+        {
+            return hand[index];
+        }
+
         // Methods
 
         /// <summary>
@@ -86,7 +92,7 @@ namespace Group5OOP4200GroupProject.Class
         public void addCard(Card card)
         {
             hand.Add(card);
-        }
+        } 
 
         /// <summary>
         /// Remove specified card form hand
@@ -94,8 +100,10 @@ namespace Group5OOP4200GroupProject.Class
         /// <param name="card">Card to remove</param>
         public void removeCard(Card card)
         {
-            hand.Remove(card);
+            hand.Remove(card);da
         }
+
+        public get
 
         /// <summary>
         ///  Adds 1 to the score of the player
