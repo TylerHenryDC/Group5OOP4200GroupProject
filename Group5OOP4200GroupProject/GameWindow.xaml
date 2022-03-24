@@ -25,7 +25,7 @@
     <Grid Width="900">
         <StackPanel  VerticalAlignment="Top" Orientation="Vertical">
             <Image
-                Width="100"
+                Width="60"
                 Source="/Images/player1.png"/>
             <Label Width="100" Height="41" Content=" Player 2"/>
         </StackPanel>
@@ -33,7 +33,7 @@
             HorizontalAlignment="Center"
             Orientation="Vertical">
             <Image
-                Width="100"
+                Width="60"
                 Source="/Images/player4.png"/>
             <Label Width="100" Height="41" Content="    You "/>
         </StackPanel>
@@ -41,7 +41,7 @@
             Orientation="Vertical"
             VerticalAlignment="Center">
             <Image
-                Width="100"
+                Width="60"
                 Source="/Images/player3.png"/>
             <Label Width="100" Height="41" Content=" Player 1"/>
         </StackPanel>
@@ -49,7 +49,7 @@
             Orientation="Vertical"
             HorizontalAlignment="Right">
             <Image
-                Width="100"
+                Width="60"
                 Source="/Images/player2.png"/>
             <Label Width="100" Height="41" Content=" Player 3"/>
         </StackPanel>
