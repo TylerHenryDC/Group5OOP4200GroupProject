@@ -92,175 +92,202 @@
                Margin="0,316,0,0"
                    VerticalAlignment="Top" 
                    Height="70" Source="/Images/Cards/backside90.jpg" Width="100"/>
-        <Image x:Name="Card13"
-            HorizontalAlignment="Left"
-                   VerticalAlignment="Top" 
-                   Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="626,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+        <Button x:Name="Card13" Margin="632,424,180,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card11"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="580,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card11" Margin="595,424,217,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card9"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="547,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card9" Margin="559,424,253,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card7"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="513,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card7" Margin="518,424,294,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card5"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="480,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card5" Margin="481,424,331,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card3"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="446,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card3" Margin="444,424,368,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card1"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="406,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card1" Margin="408,424,404,160" RenderTransformOrigin="0.5,0.5" Click="Card1_Click">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card2"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="373,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card2" Margin="367,424,445,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card4"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="339,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card4" Margin="333,424,479,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card6"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="302,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card6" Margin="296,424,516,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card8"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="269,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card8" Margin="260,424,552,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card10"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="235,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card10" Margin="219,424,593,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:Name="Card12"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top" 
-            Height="76" Source="/Images/Cards/backside90.jpg" Width="131" Margin="198,440,0,0" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Card12" Margin="187,424,625,160" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-90.738"/>
+                    <RotateTransform Angle="90"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/Images/Cards/backside90.jpg"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
+
 </Window>

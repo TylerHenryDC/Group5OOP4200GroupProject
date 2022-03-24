@@ -20,10 +20,12 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameWindow : Window
     {
+       
         public GameWindow()
         {
             InitializeComponent();
             var deck = new Deck();
+            
             deck.shuffle();
 
             var Player1 = new Player(1);
@@ -122,6 +124,59 @@ namespace Group5OOP4200GroupProject
                    }
                 }
             }
+        }
+
+        private void Card1_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[0];           
+        }
+        private void Card2_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[1];
+        }
+        private void Card3_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[2];
+        }
+        private void Card4_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[3];
+        }
+        private void Card5_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[4];
+        }
+        private void Card6_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[5];
+        }
+        private void Card7_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[6];
+        }
+        private void Card8_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[7];
+        }
+        private void Card9_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[8];
+        }
+        private void Card10_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[9];
+        }
+        private void Card11_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[10];
+        }
+        private void Card12_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[11];
+        }
+        private void Card13_Click(object sender, RoutedEventArgs e)
+        {
+            currentCard = Player1[12];
         }
     }
 }
