@@ -23,5 +23,17 @@ namespace Group5OOP4200GroupProject
         {
             InitializeComponent();
         }
+
+        private void quitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void playAgainButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            GameWindow gw = new GameWindow();
+            gw.ShowDialog();
+        }
     }
 }

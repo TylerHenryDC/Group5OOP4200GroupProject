@@ -22,7 +22,7 @@
         </Style>
 
     </Window.Resources>
-    <Grid>
+    <Grid Width="900">
         <StackPanel  VerticalAlignment="Top" Orientation="Vertical">
             <Image
                 Width="100"
