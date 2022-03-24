@@ -68,8 +68,7 @@ namespace Group5OOP4200GroupProject
                     // Turn Flag
                     bool isTurn = true;
                    // While they have cards or till turn is done
-                   // ADD CHECK FOR EMPY HAND METHOD IN PLAYER
-                   while(isTurn)
+                   while(isTurn && player.isHandEmpty())
                    {
                         // Get Card and player to ask for
                         Player playerToAsk = player.pickRandomPlayer(players);
@@ -86,7 +85,7 @@ namespace Group5OOP4200GroupProject
                             player.addToScore();
 
                             // Check for empty hand
-                            //if (player.isEmpty)
+                            if (player.isHandEmpty())
                             {
                                 // Draw new hand
                                 for (int i = 0; i < 7; i++)
@@ -108,7 +107,7 @@ namespace Group5OOP4200GroupProject
                                 player.addToScore();
 
                                 // Check for empty hand
-                                //if(player.isEmpty)
+                                if(player.isHandEmpty())
                                 {
                                     // Draw new hand
                                     for(int i = 0; i < 7; i++)
@@ -123,9 +122,7 @@ namespace Group5OOP4200GroupProject
                                 player.addCard(drawnCard);
                                 isTurn = false;
                             }
-                            
-                        } 
-                            
+                        }     
                    }
                 }
             }
