@@ -20,18 +20,24 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameWindow : Window
     {
+        private Player[] players;
+        private Deck deck;
+
         Card currentCard = new Card();
         public GameWindow()
         {
             InitializeComponent();
-            var deck = new Deck();
             
+            // Create new Deck and shuffle
+            deck = new Deck();
             deck.shuffle();
 
+            // Create new players and add to collection
             var Player1 = new Player(1);
             var Player2 = new AI(2, Enums.difficulty.Hard);
-            Player[] Players = { Player1, Player2 };
-            deck.deal(ref Players);
+            players = new Player[]{ Player1, Player2 };
+
+            deck.deal(ref players);
             Debug.WriteLine(Player1.ShowHand());
         }
 
@@ -55,7 +61,7 @@ namespace Group5OOP4200GroupProject
         private void runAITurns()
         {
             // Go through players collection
-            foreach(var player in Players)
+            foreach(AI player in players)
             {
                 // Only for AI players
                 if (player is AI)
@@ -67,48 +73,48 @@ namespace Group5OOP4200GroupProject
                    while(isTurn)
                    {
                         // Get Card and player to ask for
-                        int playerToAsk = player.pickRandomPlayer(Players);
+                        Player playerToAsk = player.pickRandomPlayer(players);
                         Card cardToAsk = player.pickRandomCard();
 
                         // Check if payer has card in hand
-                        if(Players[playerToAsk].CheckHand())
+                        if(playerToAsk.checkHand(cardToAsk))
                         {
                             // Remove card form  both players hand 
                             player.removeCard(cardToAsk);
-                            Players[playerToAsk].(cardToAsk);
+                            playerToAsk.removeCard(cardToAsk);
 
                             // Increase score of asking player
                             player.addToScore();
 
                             // Check for empty hand
-                            if (player.isEmpty)
+                            //if (player.isEmpty)
                             {
                                 // Draw new hand
                                 for (int i = 0; i < 7; i++)
                                 {
-                                    player.addCard(Deck.drawCard());
+                                    player.addCard(deck.drawCard());
                                 }
                             }
                         }
                         else 
                         {
                             // Draw a card
-                            Card drawnCard = Deck.drawCard();
+                            Card drawnCard = deck.drawCard();
                             
                             // Check if card is in asking palyers hand
-                            if (player.CheckHand(drawnCard))
+                            if (player.checkHand(drawnCard))
                             {
                                 // Remove the card from hand and increase score
                                 player.removeCard(cardToAsk);
                                 player.addToScore();
 
                                 // Check for empty hand
-                                if(player.isEmpty)
+                                //if(player.isEmpty)
                                 {
                                     // Draw new hand
                                     for(int i = 0; i < 7; i++)
                                     {
-                                        player.addCard(Deck.drawCard());
+                                        player.addCard(deck.drawCard());
                                     }
                                 }
                             }
