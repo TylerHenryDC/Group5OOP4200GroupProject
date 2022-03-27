@@ -36,5 +36,9 @@ namespace Group5OOP4200GroupProject
             gw.ShowDialog();
         }
 
+        private void guideButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

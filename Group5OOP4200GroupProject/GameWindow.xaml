@@ -25,6 +25,7 @@
     <Grid Width="900">
         <StackPanel  VerticalAlignment="Top" Orientation="Vertical">
             <Image
+  
                 Width="60"
                 Source="/Images/player1.png"/>
             <Label Width="100" Height="41" Content=" Player 2"/>
@@ -289,11 +290,11 @@
         </Button>
         <Button x:Name="buttonChoosePlayer2" 
             Content="Choose&#xA;Player 2" 
-            HorizontalAlignment="Right" 
+            HorizontalAlignment="Center" 
             Height="60"
             Width="120"
             FontSize="23"
-            VerticalAlignment="Top" Margin="0,27,524,0" 
+            VerticalAlignment="Top" Margin="0,135,0,0" 
                 >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

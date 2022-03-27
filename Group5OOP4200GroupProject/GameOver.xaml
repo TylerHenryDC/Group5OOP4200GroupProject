@@ -25,11 +25,11 @@
     <Grid>
         <Button x:Name="playAgainButton" 
             Content="Play Again!" 
-            FontSize="23"
             HorizontalAlignment="Left" 
-            Margin="190,300,0,0" 
+            Margin="250,370,0,0" 
             VerticalAlignment="Top"
-            Height="74" Width="150" Click="playAgainButton_Click" 
+            Height="75" Width="150" 
+            Click="playAgainButton_Click" 
             >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -40,9 +40,8 @@
         </Button>
         <Button x:Name="quitButton" 
             Content="Quit"
-            FontSize="23"
             HorizontalAlignment="Left" 
-            Margin="500,300,0,0" 
+            Margin="500,370,0,0" 
             VerticalAlignment="Top" 
             Height="75" Width="150" 
             Click="quitButton_Click" RenderTransformOrigin="-0.093,-1.246">
@@ -54,7 +53,22 @@
 
         </Button>
         <Label Content="" HorizontalAlignment="Left" Margin="264,229,0,0" VerticalAlignment="Top" Height="40" Width="300"/>
-        <Image Source="/Images/gameOver.png"  HorizontalAlignment="Left" Height="150" Margin="346,63,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.326,0.747"/>
+        <Image Source="/Images/gameOver.png"  HorizontalAlignment="Center" Height="150" Margin="0,134,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.326,0.747"/>
+        <Button x:Name="guideButton1" 
+            Content="User Guide" 
+            HorizontalAlignment="Right" 
+            Height="54"
+            Width="120"
+            FontSize="23"
+            VerticalAlignment="Top" Click="guideButton_Click" 
+                >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
 
     </Grid>
 </Window>
