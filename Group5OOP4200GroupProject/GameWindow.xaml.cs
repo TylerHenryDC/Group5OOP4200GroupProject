@@ -166,91 +166,94 @@ namespace Group5OOP4200GroupProject
 
         private void Card1_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[0];
+            currentCard = players[0].getCardByIndex(0);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
+            Image img = new Image();
+
         }
         private void Card2_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[1];
+            currentCard = players[0].getCardByIndex(1); ;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card3_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[2];
+            currentCard = players[0].getCardByIndex(2);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card4_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[3];
+            currentCard = players[0].getCardByIndex(3);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card5_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[4];
+            currentCard = players[0].getCardByIndex(4);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card6_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[5];
+            currentCard = players[0].getCardByIndex(5);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card7_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[6];
+            currentCard = players[0].getCardByIndex(6);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card8_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[7];
+            currentCard = players[0].getCardByIndex(7);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card9_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[8];
+            currentCard = players[0].getCardByIndex(8);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card10_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[9];
+            currentCard = players[0].getCardByIndex(9);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
+
         private void Card11_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[10];
+            currentCard = players[0].getCardByIndex(10);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card12_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[11];
+            currentCard = players[0].getCardByIndex(11);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
         private void Card13_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = Player1[12];
+            currentCard = players[0].getCardByIndex(12);
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -258,48 +261,57 @@ namespace Group5OOP4200GroupProject
 
         private void buttonChoosePlayer1_Click(object sender, RoutedEventArgs e)
         {
-            if (Player4.CheckHand(currentCard))
+            if (players[1].checkHand(currentCard))
             {
-                Player1.addCard(currentCard);
-                Player2.removeCard(currentCard);
+                players[0].removeCard(currentCard);
+                players[1].removeCard(currentCard);
+                players[0].addToScore();
             }
             else
             {
-                Player1.addCard(deck.drawCard);
+                Card drawnCard = deck.drawCard();
+                players[0].addCard(drawnCard);
             }
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
+            runAITurns();
         }
         private void buttonChoosePlayer2_Click(object sender, RoutedEventArgs e)
         {
-            if (Player3.CheckHand(currentCard))
+            if (players[2].checkHand(currentCard))
             {
-                Player1.addCard(currentCard);
-                Player4.removeCard(currentCard);
+                players[0].removeCard(currentCard);
+                players[2].removeCard(currentCard);
+                players[0].addToScore();
             }
             else
             {
-                Player3.addCard(deck.drawCard);
+                Card drawnCard = deck.drawCard();
+                players[0].addCard(drawnCard);
             }
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
+            runAITurns();
         }
         private void buttonChoosePlayer3_Click(object sender, RoutedEventArgs e)
         {
-            if(Player4.CheckHand(currentCard))
+            if (players[3].checkHand(currentCard))
             {
-                Player1.addCard(currentCard);
-                Player4.removeCard(currentCard);
+                players[0].removeCard(currentCard);
+                players[3].removeCard(currentCard);
+                players[0].addToScore();
             }
             else
             {
-                Player1.addCard(deck.drawCard);
+                Card drawnCard = deck.drawCard();
+                players[0].addCard(drawnCard);
             }
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
+            runAITurns();
         }
     }
 }
