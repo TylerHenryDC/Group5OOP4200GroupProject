@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Group5OOP4200GroupProject"
         mc:Ignorable="d"
-        Title="GameOver" Height="450" Width="800">
-    <Grid Height="684.04">
+              FontSize="26" 
+        Background="#EBEAEA"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        FontFamily="Candara " FontStyle="Normal"
+        FontWeight="Light"
+        Icon ="Images/logo.ico"
+        Title="Go Fish!" Height="700" Width="900" Closing="Window_Closing">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#CCCCCC"/>
+
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#353535"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
         <Button x:Name="playAgainButton" 
             Content="Play Again!" 
             FontSize="23"
