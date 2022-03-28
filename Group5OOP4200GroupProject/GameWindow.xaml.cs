@@ -43,9 +43,8 @@ namespace Group5OOP4200GroupProject
 
         private void guideButton_Click(object sender, RoutedEventArgs e)
         {
-            string guideMessage = "";
-
-            MessageBox.Show(guideMessage);
+            UserGuideWindow userGuide = new UserGuideWindow();
+            userGuide.Show();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

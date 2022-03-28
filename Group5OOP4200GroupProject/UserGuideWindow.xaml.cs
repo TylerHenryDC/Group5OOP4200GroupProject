@@ -15,31 +15,18 @@ using System.Windows.Shapes;
 namespace Group5OOP4200GroupProject
 {
     /// <summary>
-    /// Interaction logic for GameOver.xaml
+    /// Interaction logic for UserGuideWindow.xaml
     /// </summary>
-    public partial class GameOver : Window
+    public partial class UserGuideWindow : Window
     {
-        public GameOver()
+        public UserGuideWindow()
         {
             InitializeComponent();
-        }
-
-        private void quitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
 
         private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            GameWindow gw = new GameWindow();
-            gw.ShowDialog();
-        }
-
-        private void guideButton_Click(object sender, RoutedEventArgs e)
-        {
-            UserGuideWindow userGuide = new UserGuideWindow();
-            userGuide.Show();
         }
     }
 }
