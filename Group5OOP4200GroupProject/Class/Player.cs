@@ -113,10 +113,9 @@ namespace Group5OOP4200GroupProject.Class
         /// <param name="card">Card to remove</param>
         public void removeCard(Card card)
         {
-            hand.Remove(card);da
+            hand.Remove(card);
         }
 
-        public get
 
         /// <summary>
         ///  Adds 1 to the score of the player
