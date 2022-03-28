@@ -39,6 +39,7 @@ namespace Group5OOP4200GroupProject
 
             deck.deal(ref players);
             handDisplay();
+            getAiHandSizes();
         }
 
         /// <summary>
@@ -431,7 +432,10 @@ namespace Group5OOP4200GroupProject
             handDisplay();
             runAITurns();
         }
-
+        private void getAiHandSizes()
+        {
+           ai1HandSizeLabel.Content=players[1].getHandSize();
+        }
         /// <summary>
         /// Changes images of hand to match player hand
         /// </summary>
