@@ -103,8 +103,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -118,8 +118,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -133,8 +133,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -148,8 +148,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -163,8 +163,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -178,8 +178,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -192,6 +192,12 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
+                </ControlTemplate>
+            </Button.Template> 
             
         </Button>
         <Button x:Name="Card2" Margin="367,424,445,160" RenderTransformOrigin="0.5,0.5" Click="Card2_Click">
@@ -204,8 +210,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -219,8 +225,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -234,8 +240,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -249,8 +255,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -264,8 +270,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -279,8 +285,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
             <Button.Template>
-                <ControlTemplate>
-                    <Image Source="/Images/Cards/backside90.jpg"/>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
