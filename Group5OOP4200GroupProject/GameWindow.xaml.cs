@@ -40,6 +40,7 @@ namespace Group5OOP4200GroupProject
             deck.deal(ref players);
             handDisplay();
             getAiHandSizes();
+            doubleCheck();
         }
 
         /// <summary>
@@ -488,6 +489,30 @@ namespace Group5OOP4200GroupProject
         {
             playerScoreLabel.Content = "Score: " + players[0].getScore();
             ai1ScoreLabel.Content = "Score: " + players[1].getScore();
+        }
+        private void doubleCheck()
+        {
+            int count = 0;
+            Card checkCard = new Card();
+            for(int i = 0; i < players[0].getHandSize(); i++)
+            {
+                checkCard = players[0].getCardByIndex(i);
+                count = 0;
+                for(int j = 0; j < players[0].getHandSize(); j++)
+                {
+                    if(players[0].getCardByIndex(j) == checkCard)
+                    {
+                        count++;
+                    }
+                }
+                if(count == 2)
+                {
+                    players[0].removeCard(checkCard);
+                    players[0].removeCard(checkCard);
+                    players[0].addToScore();
+
+                }
+            }
         }
         /// <summary>
         /// Changes images of hand to match player hand
