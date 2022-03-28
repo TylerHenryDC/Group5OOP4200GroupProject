@@ -12,7 +12,7 @@
         FontFamily="Candara " FontStyle="Normal"
         FontWeight="Light"
         Icon ="Images/logo.ico"
-        Title="Game Over" Height="700" Width="900" Closing="Window_Closing">
+        Title="Game Over" Height="700" Width="900">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#CCCCCC"/>
