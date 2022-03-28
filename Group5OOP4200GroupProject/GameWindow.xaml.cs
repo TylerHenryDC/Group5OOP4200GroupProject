@@ -85,6 +85,8 @@ namespace Group5OOP4200GroupProject
                         Player playerToAsk = player.pickRandomPlayer(players);
                         Card cardToAsk = player.pickRandomCard();
 
+                        MessageBox.Show(player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
+
                         // Check if payer has card in hand
                         if (playerToAsk.checkHand(cardToAsk))
                         {
@@ -129,15 +131,51 @@ namespace Group5OOP4200GroupProject
                                 // Draw a card
                                 Card drawnCard = deck.drawCard();
 
-                                // Check if card is in asking palyers hand
-                                if (player.checkHand(drawnCard))
+                                MessageBox.Show(player.ID + " drew a " + drawnCard.cardValue);
+
+                                if (cardToAsk.cardValue == drawnCard.cardValue)
                                 {
+                                    MessageBox.Show(player.ID + " drew what they were asking for.");
+
                                     // Remove the card from hand and increase score
                                     player.removeCard(cardToAsk);
                                     player.addToScore();
 
                                     // Change turn flag
                                     isTurn = true;
+
+                                    // Check for empty hand
+                                    if (player.isHandEmpty())
+                                    {
+                                        // Draw new hand if deck has cards 
+                                        if (!deck.isEmpty())
+                                        {
+                                            // Draw new hand
+                                            for (int i = 0; i < 7; i++)
+                                            {
+                                                // Check if deck if empty
+                                                if (!deck.isEmpty())
+                                                {
+                                                    player.addCard(deck.drawCard());
+                                                }
+                                            }
+                                        }
+                                        // End AI turn
+                                        else
+                                        {
+                                            isTurn = false;
+                                        }
+                                    }
+                                }
+                                // Check if card is in asking palyers hand
+                                else if (player.checkHand(drawnCard))
+                                {
+                                    MessageBox.Show(player.ID + " did not draw what they were asking for");
+
+                                    // Remove the card from hand and increase score
+                                    player.removeCard(cardToAsk);
+                                    player.addToScore();
+                                                                        
 
                                     // Check for empty hand
                                     if (player.isHandEmpty())
