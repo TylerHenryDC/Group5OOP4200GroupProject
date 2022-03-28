@@ -39,7 +39,7 @@ namespace Group5OOP4200GroupProject
 
         private void playButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
             GameWindow gw = new GameWindow();
             gw.ShowDialog();
         }

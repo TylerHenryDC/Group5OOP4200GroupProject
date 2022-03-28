@@ -38,7 +38,7 @@ namespace Group5OOP4200GroupProject
             players = new Player[] { Player1, Player2 };
 
             deck.deal(ref players);
-            Debug.WriteLine(Player1.ShowHand());
+            handDisplay();
         }
 
         /// <summary>
@@ -181,6 +181,7 @@ namespace Group5OOP4200GroupProject
         private void Card1_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(0);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -195,7 +196,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card2_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(1); ;
+            currentCard = players[0].getCardByIndex(1);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -209,6 +211,7 @@ namespace Group5OOP4200GroupProject
         private void Card3_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(2);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -222,6 +225,7 @@ namespace Group5OOP4200GroupProject
         private void Card4_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(3);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -235,6 +239,7 @@ namespace Group5OOP4200GroupProject
         private void Card5_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(4);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -248,6 +253,7 @@ namespace Group5OOP4200GroupProject
         private void Card6_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(5);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -261,6 +267,7 @@ namespace Group5OOP4200GroupProject
         private void Card7_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(6);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -274,6 +281,7 @@ namespace Group5OOP4200GroupProject
         private void Card8_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(7);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -287,6 +295,7 @@ namespace Group5OOP4200GroupProject
         private void Card9_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(8);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -300,6 +309,7 @@ namespace Group5OOP4200GroupProject
         private void Card10_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(9);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -313,6 +323,7 @@ namespace Group5OOP4200GroupProject
         private void Card11_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(10);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -326,6 +337,7 @@ namespace Group5OOP4200GroupProject
         private void Card12_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(11);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -339,6 +351,7 @@ namespace Group5OOP4200GroupProject
         private void Card13_Click(object sender, RoutedEventArgs e)
         {
             currentCard = players[0].getCardByIndex(12);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
@@ -424,7 +437,7 @@ namespace Group5OOP4200GroupProject
         /// </summary>
         private void handDisplay()
         {
-            Card handCard = new Card();
+            Card @handCard = new Card();
             Card1.Visibility = Visibility.Hidden;
             Card2.Visibility = Visibility.Hidden;
             Card3.Visibility = Visibility.Hidden;
@@ -442,79 +455,79 @@ namespace Group5OOP4200GroupProject
             if (players[0].getHandSize() > 12)
             {
                 handCard = players[0].getCardByIndex(12);
-                Card13.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card13.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
                 Card13.Visibility = Visibility.Visible;                
             }
             if (players[0].getHandSize() > 11)
             {
                 handCard = players[0].getCardByIndex(11);
-                Card12.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card12.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
                 Card12.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 10)
             {
                 handCard = players[0].getCardByIndex(10);
-                Card11.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card11.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
                 Card11.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 9)
             {
                 handCard = players[0].getCardByIndex(9);
-                Card10.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card10.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card10.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 8)
             {
                 handCard = players[0].getCardByIndex(8);
-                Card9.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card9.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card9.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 7)
             {
                 handCard = players[0].getCardByIndex(7);
-                Card8.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card8.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card8.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 6)
             {
                 handCard = players[0].getCardByIndex(6);
-                Card7.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card7.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card7.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 5)
             {
                 handCard = players[0].getCardByIndex(5);
-                Card6.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card6.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card6.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 4)
             {
                 handCard = players[0].getCardByIndex(4);
-                Card5.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card5.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card5.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 3)
             {
                 handCard = players[0].getCardByIndex(3);
-                Card4.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card4.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card4.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 2)
             {
                 handCard = players[0].getCardByIndex(2);
-                Card3.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card3.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card3.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 1)
             {
                 handCard = players[0].getCardByIndex(1);
-                Card2.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card2.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card2.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 0)
             {
                 handCard = players[0].getCardByIndex(0);
-                Card1.Content = new BitmapImage(new Uri(handCard.cardImage));
+                Card1.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card1.Visibility = Visibility.Visible;
             }
 
