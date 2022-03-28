@@ -38,6 +38,15 @@ namespace Group5OOP4200GroupProject.Class
         }
 
         /// <summary>
+        /// Returns the hand size
+        /// </summary>
+        /// <returns></returns>
+        public int getHandSize()
+        {
+            return this.hand.Count;
+        }
+
+        /// <summary>
         /// Returns a card a passed index (Not removed)
         /// </summary>
         /// <param name="index">The index of the card in the players hand</param>

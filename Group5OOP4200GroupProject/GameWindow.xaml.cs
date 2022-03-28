@@ -27,7 +27,7 @@ namespace Group5OOP4200GroupProject
         public GameWindow()
         {
             InitializeComponent();
-            
+
             // Create new Deck and shuffle
             deck = new Deck();
             deck.shuffle();
@@ -35,7 +35,7 @@ namespace Group5OOP4200GroupProject
             // Create new players and add to collection
             var Player1 = new Player(1);
             var Player2 = new AI(2, Enums.difficulty.Hard);
-            players = new Player[]{ Player1, Player2 };
+            players = new Player[] { Player1, Player2 };
 
             deck.deal(ref players);
             Debug.WriteLine(Player1.ShowHand());
@@ -60,22 +60,22 @@ namespace Group5OOP4200GroupProject
         private void runAITurns()
         {
             // Go through players collection
-            foreach(AI player in players)
+            foreach (AI player in players)
             {
                 // Only for AI players
                 if (player is AI)
                 {
                     // Turn Flag
                     bool isTurn = true;
-                   // While they have cards or till turn is done
-                   while(isTurn && !player.isHandEmpty())
-                   {
+                    // While they have cards or till turn is done
+                    while (isTurn && !player.isHandEmpty())
+                    {
                         // Get Card and player to ask for
                         Player playerToAsk = player.pickRandomPlayer(players);
                         Card cardToAsk = player.pickRandomCard();
 
                         // Check if payer has card in hand
-                        if(playerToAsk.checkHand(cardToAsk))
+                        if (playerToAsk.checkHand(cardToAsk))
                         {
                             // Remove card form  both players hand
                             player.removeCard(cardToAsk);
@@ -86,7 +86,7 @@ namespace Group5OOP4200GroupProject
 
                             // Check for empty hand
                             if (player.isHandEmpty())
-                            { 
+                            {
                                 // Draw new hand if deck has cards 
                                 if (!deck.isEmpty())
                                 {
@@ -107,7 +107,7 @@ namespace Group5OOP4200GroupProject
                                 }
                             }
                         }
-                        else 
+                        else
                         {
                             // Chenge turen flag
                             isTurn = false;
@@ -155,11 +155,11 @@ namespace Group5OOP4200GroupProject
                                 {
                                     // Add the card to hand
                                     player.addCard(drawnCard);
-                                    
+
                                 }
                             }
-                        }     
-                   }
+                        }
+                    }
                 }
             }
         }
@@ -313,5 +313,14 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer3.IsEnabled = false;
             runAITurns();
         }
+
+        private void handDisplay()
+        {
+            if (players[0]. > 12)
+            {
+
+            }
+        }
     }
+        
 }
