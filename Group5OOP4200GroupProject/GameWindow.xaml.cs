@@ -20,7 +20,7 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameWindow : Window
     {
-        private Player[] players;
+        private List<Player> players;
         private Deck deck;
 
         Card currentCard = new Card();
@@ -35,7 +35,7 @@ namespace Group5OOP4200GroupProject
             // Create new players and add to collection
             var Player1 = new Player(1);
             var Player2 = new AI(2, Enums.difficulty.Hard);
-            players = new Player[] { Player1, Player2 };
+            players = new List<Player> { Player1, Player2 };
 
             deck.deal(ref players);
             handDisplay();
@@ -69,8 +69,10 @@ namespace Group5OOP4200GroupProject
         /// </summary>
         private void runAITurns()
         {
+            List<AI> ais = players.OfType<AI>().ToList();
+            
             // Go through players collection
-            foreach (AI player in players)
+            foreach (AI player in ais)
             {
                 // Only for AI players
                 if (player is AI)
