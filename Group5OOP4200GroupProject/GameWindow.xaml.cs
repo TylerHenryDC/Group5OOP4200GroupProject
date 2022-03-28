@@ -93,6 +93,7 @@ namespace Group5OOP4200GroupProject
                             player.removeCard(cardToAsk);
                             playerToAsk.removeCard(cardToAsk);
                             handDisplay();
+                            getAiHandSizes();
                             // Increase score of asking player
                             player.addToScore();
 
@@ -461,19 +462,19 @@ namespace Group5OOP4200GroupProject
             if (players[0].getHandSize() > 12)
             {
                 handCard = players[0].getCardByIndex(12);
-                Card13.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
+                Card13.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card13.Visibility = Visibility.Visible;                
             }
             if (players[0].getHandSize() > 11)
             {
                 handCard = players[0].getCardByIndex(11);
-                Card12.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
+                Card12.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card12.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 10)
             {
                 handCard = players[0].getCardByIndex(10);
-                Card11.Content = new BitmapImage(new Uri(@handCard.getCardImage()));
+                Card11.Content = new BitmapImage(new Uri(@handCard.getCardImage(), UriKind.Relative));
                 Card11.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 9)
