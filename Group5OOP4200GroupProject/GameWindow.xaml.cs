@@ -424,6 +424,7 @@ namespace Group5OOP4200GroupProject
         /// </summary>
         private void handDisplay()
         {
+            Card handCard = new Card();
             Card1.Visibility = Visibility.Hidden;
             Card2.Visibility = Visibility.Hidden;
             Card3.Visibility = Visibility.Hidden;
@@ -439,68 +440,81 @@ namespace Group5OOP4200GroupProject
             Card13.Visibility = Visibility.Hidden;
 
             if (players[0].getHandSize() > 12)
-            {       
-                Card13.Content = new BitmapImage(new Uri(""));
+            {
+                handCard = players[0].getCardByIndex(12);
+                Card13.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card13.Visibility = Visibility.Visible;                
             }
             if (players[0].getHandSize() > 11)
             {
-                Card12.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(11);
+                Card12.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card12.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 10)
             {
-                Card11.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(10);
+                Card11.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card11.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 9)
             {
-                Card10.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(9);
+                Card10.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card10.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 8)
             {
-                Card9.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(8);
+                Card9.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card9.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 7)
             {
-                Card8.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(7);
+                Card8.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card8.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 6)
             {
-                Card7.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(6);
+                Card7.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card7.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 5)
             {
-                Card6.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(5);
+                Card6.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card6.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 4)
             {
-                Card5.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(4);
+                Card5.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card5.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 3)
             {
-                Card4.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(3);
+                Card4.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card4.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 2)
             {
-                Card3.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(2);
+                Card3.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card3.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 1)
             {
-                Card2.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(1);
+                Card2.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card2.Visibility = Visibility.Visible;
             }
             if (players[0].getHandSize() > 0)
             {
-                Card1.Content = new BitmapImage(new Uri(""));
+                handCard = players[0].getCardByIndex(0);
+                Card1.Content = new BitmapImage(new Uri(handCard.cardImage));
                 Card1.Visibility = Visibility.Visible;
             }
 
