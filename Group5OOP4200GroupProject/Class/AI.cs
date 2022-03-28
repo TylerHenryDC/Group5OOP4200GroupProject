@@ -43,10 +43,10 @@ namespace Group5OOP4200GroupProject.Class
         /// </summary>
         /// <param name="players">Player group to choose from</param>
         /// <returns>Randomly chosen player</returns>
-        public Player pickRandomPlayer(Player[] players)
+        public Player pickRandomPlayer(List<Player> players)
         {
             // Get random value between 0 and player group size
-            int playerIndex = rand.Next(0, players.Length);
+            int playerIndex = rand.Next(0, players.Count);
 
             // Check if the ID of player at chose idex is this ai player
             if (players[playerIndex].ID == this.ID)
@@ -55,7 +55,7 @@ namespace Group5OOP4200GroupProject.Class
                 playerIndex ++;
 
                 // Check if index has gone out of range
-                if (playerIndex >= players.Length)
+                if (playerIndex >= players.Count)
                 {
                     // Set index to 0
                     playerIndex = 0;

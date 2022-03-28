@@ -60,10 +60,10 @@ namespace Group5OOP4200GroupProject.Class
         /// Deals cards to players
         /// </summary>
         /// <param name="players">Reference to an array of players in the game</param>
-        public void deal(ref Player[] players)
+        public void deal(ref List<Player> players)
         {
             // Loops through players
-            for (int i = 0; i < players.Length; i++) 
+            for (int i = 0; i < players.Count; i++) 
             {
                 // Loops numberOfCards times giving that number of cards
                 for (int c = 0; c < numOfCards; c++) 
