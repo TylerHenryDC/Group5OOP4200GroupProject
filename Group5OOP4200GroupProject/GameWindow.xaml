@@ -89,19 +89,7 @@
             Margin="0, 15, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image HorizontalAlignment="Center" 
-            Margin="0,316,0,0"
-            VerticalAlignment="Top" 
-            Height="70" Source="/Images/Cards/backside90.jpg" Width="100"/>
         <Button x:Name="Card13" Margin="632,424,180,160" RenderTransformOrigin="0.5,0.5" Click="Card13_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -109,14 +97,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card11" Margin="595,424,217,160" RenderTransformOrigin="0.5,0.5" Click="Card11_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -124,14 +104,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card9" Margin="559,424,253,160" RenderTransformOrigin="0.5,0.5" Click="Card9_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -139,14 +111,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card7" Margin="518,424,294,160" RenderTransformOrigin="0.5,0.5" Click="Card7_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -154,14 +118,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card5" Margin="481,424,331,160" RenderTransformOrigin="0.5,0.5" Click="Card5_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -169,14 +125,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card3" Margin="444,424,368,160" RenderTransformOrigin="0.5,0.5" Click="Card3_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -184,31 +132,13 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card1" Margin="408,424,404,160" RenderTransformOrigin="0.5,0.5" Click="Card1_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
-            </Button.Template> 
-            
+            </Button.Template>            
         </Button>
         <Button x:Name="Card2" Margin="367,424,445,160" RenderTransformOrigin="0.5,0.5" Click="Card2_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -216,14 +146,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card4" Margin="333,424,479,160" RenderTransformOrigin="0.5,0.5" Click="Card4_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -231,14 +153,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card6" Margin="296,424,516,160" RenderTransformOrigin="0.5,0.5" Click="Card6_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -246,14 +160,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card8" Margin="260,424,552,160" RenderTransformOrigin="0.5,0.5" Click="Card8_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -261,14 +167,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card10" Margin="219,424,593,160" RenderTransformOrigin="0.5,0.5" Click="Card10_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -276,14 +174,6 @@
             </Button.Template>
         </Button>
         <Button x:Name="Card12" Margin="187,424,625,160" RenderTransformOrigin="0.5,0.5" Click="Card12_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
@@ -338,7 +228,7 @@
             </Button.Resources>
 
         </Button>
-        <Label x:Name="cardLabel" Content="" HorizontalAlignment="Center" Margin="0,388,0,0" VerticalAlignment="Top" Width="394"/>
+        <Label x:Name="cardLabel" HorizontalContentAlignment="Center"  Content="" HorizontalAlignment="Center" Margin="0,388,0,0" VerticalAlignment="Top" Width="394"/>
 
     </Grid>
 
