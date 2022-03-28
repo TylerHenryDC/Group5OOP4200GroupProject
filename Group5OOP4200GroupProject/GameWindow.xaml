@@ -230,6 +230,8 @@
         </Button>
         <Label x:Name="cardLabel" HorizontalContentAlignment="Center"  Content="" HorizontalAlignment="Center" Margin="0,388,0,0" VerticalAlignment="Top" Width="394"/>
         <Label x:Name="ai1HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="45,409,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="playerScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="518,591,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ai1ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 

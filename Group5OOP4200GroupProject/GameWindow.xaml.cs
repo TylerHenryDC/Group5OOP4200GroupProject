@@ -70,7 +70,7 @@ namespace Group5OOP4200GroupProject
         private void runAITurns()
         {
             List<AI> ais = players.OfType<AI>().ToList();
-            
+
             // Go through players collection
             foreach (AI player in ais)
             {
@@ -93,6 +93,7 @@ namespace Group5OOP4200GroupProject
                             player.removeCard(cardToAsk);
                             playerToAsk.removeCard(cardToAsk);
                             handDisplay();
+                            updateScore();
                             getAiHandSizes();
                             // Increase score of asking player
                             player.addToScore();
@@ -189,7 +190,7 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer1.IsEnabled = true;
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
-            
+
 
         }
 
@@ -383,6 +384,8 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
+            updateScore();
+            getAiHandSizes();
             runAITurns();
         }
 
@@ -408,6 +411,8 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
+            getAiHandSizes();
+            updateScore();
             runAITurns();
         }
 
@@ -433,11 +438,18 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
+            updateScore();
+            getAiHandSizes();
             runAITurns();
         }
         private void getAiHandSizes()
         {
-           ai1HandSizeLabel.Content=players[1].getHandSize();
+            ai1HandSizeLabel.Content = players[1].getHandSize();
+        }
+        private void updateScore()
+        {
+            playerScoreLabel.Content = "Score: " + players[0].getScore();
+            ai1ScoreLabel.Content = "Score: " + players[1].getScore();
         }
         /// <summary>
         /// Changes images of hand to match player hand
