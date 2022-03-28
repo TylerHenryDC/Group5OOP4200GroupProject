@@ -174,7 +174,7 @@ namespace Group5OOP4200GroupProject
                                 // Check if card is in asking palyers hand
                                 else if (player.checkHand(drawnCard))
                                 {
-                                    MessageBox.Show(player.ID + " did not draw what they were asking for");
+                                    MessageBox.Show(player.ID + " did not draw what they were asking for but it was in there hand");
 
                                     // Remove the card from hand and increase score
                                     player.removeCard(cardToAsk);
@@ -200,6 +200,7 @@ namespace Group5OOP4200GroupProject
                                         // End AI turn
                                         else
                                         {
+                                            MessageBox.Show(player.ID + " Turn end.");
                                             isTurn = false;
                                         }
                                     }
@@ -212,6 +213,8 @@ namespace Group5OOP4200GroupProject
                                 }
                             }
                         }
+
+                        updateScore();
                     }
                 }
             }
