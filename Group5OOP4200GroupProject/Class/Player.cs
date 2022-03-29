@@ -113,7 +113,8 @@ namespace Group5OOP4200GroupProject.Class
         /// <param name="card">Card to remove</param>
         public void removeCard(Card card)
         {
-            hand.Remove(card);
+            Card removeCard = hand.Find(x => x.cardValue == card.cardValue);
+            hand.Remove(removeCard);
         }
 
 
