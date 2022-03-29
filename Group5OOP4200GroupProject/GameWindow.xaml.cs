@@ -472,7 +472,7 @@ namespace Group5OOP4200GroupProject
                     }
                 }
             }
-
+            InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
@@ -545,6 +545,7 @@ namespace Group5OOP4200GroupProject
                     }
                 }
             }
+            InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
@@ -614,6 +615,7 @@ namespace Group5OOP4200GroupProject
                     }
                 }
             }
+            InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
