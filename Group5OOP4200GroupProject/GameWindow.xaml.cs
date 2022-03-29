@@ -87,7 +87,7 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBox.Show("Are you sure you want to quit?");
+           // MessageBox.Show("Are you sure you want to quit?");
 
         }
 
