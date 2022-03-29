@@ -90,7 +90,29 @@ namespace Group5OOP4200GroupProject
            // MessageBox.Show("Are you sure you want to quit?");
 
         }
-
+        private void deckImageSize()
+        {
+            if(deck.getDeckSize() < 32)
+            {
+                deckLayer1.Visibility = Visibility.Hidden;
+            }
+            if(deck.getDeckSize() < 24)
+            {
+                deckLayer2.Visibility = Visibility.Hidden;
+            }
+            if (deck.getDeckSize() < 15)
+            {
+                deckLayer3.Visibility = Visibility.Hidden;
+            }
+            if (deck.getDeckSize() < 7)
+            {
+                deckLayer4.Visibility = Visibility.Hidden;
+            }
+            if (deck.getDeckSize() == 0)
+            {
+                deckLayer5.Visibility = Visibility.Hidden;
+            }
+        }
         /// <summary>
         /// Runs through the AI player turns
         /// </summary>
@@ -208,6 +230,7 @@ namespace Group5OOP4200GroupProject
                         handDisplay();
                         getAiHandSizes();
                         InitCheckHand();
+                        deckImageSize();
                     }
                 }
             }
@@ -482,7 +505,9 @@ namespace Group5OOP4200GroupProject
             handDisplay();
             updateScore();
             getAiHandSizes();
+            deckImageSize();
             runAITurns();
+
         }
 
         /// <summary>
@@ -555,6 +580,7 @@ namespace Group5OOP4200GroupProject
             handDisplay();
             getAiHandSizes();
             updateScore();
+            deckImageSize();
             runAITurns();
         }
 
@@ -625,6 +651,7 @@ namespace Group5OOP4200GroupProject
             handDisplay();
             updateScore();
             getAiHandSizes();
+            deckImageSize();
             runAITurns();
         }
         private void getAiHandSizes()

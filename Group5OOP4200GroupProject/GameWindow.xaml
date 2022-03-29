@@ -69,23 +69,23 @@
             </Button.Resources>
 
         </Button>
-        <Image HorizontalAlignment="Center" 
+        <Image x:Name="deckLayer5" HorizontalAlignment="Center" 
             VerticalAlignment="Center" 
             Margin="0, 3, 0, 0"
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image HorizontalAlignment="Center"
+        <Image x:Name="deckLayer4" HorizontalAlignment="Center"
             Margin="0, 6, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image HorizontalAlignment="Center" 
+        <Image x:Name="deckLayer3" HorizontalAlignment="Center" 
             Margin="0, 9, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image HorizontalAlignment="Center" 
+        <Image x:Name="deckLayer2" HorizontalAlignment="Center" 
             Margin="0, 12, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image HorizontalAlignment="Center"
+        <Image x:Name="deckLayer1" HorizontalAlignment="Center"
             Margin="0, 15, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>

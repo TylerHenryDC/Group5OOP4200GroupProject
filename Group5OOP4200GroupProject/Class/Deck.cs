@@ -84,7 +84,16 @@ namespace Group5OOP4200GroupProject.Class
         public bool isEmpty()
         {
             return cards.Count == 0;
-    }
+        }
+
+        /// <summary>
+        /// Returns deck size
+        /// </summary>
+        /// <returns></returns>
+        public int getDeckSize()
+        {
+            return cards.Count;
+        }
 
     }
 
