@@ -12,7 +12,7 @@
         FontFamily="Candara " FontStyle="Normal"
         FontWeight="Light"
         Icon ="Images/logo.ico"
-        Title="Go Fish!" Height="700" Width="900" Closing="Window_Closing">
+        Title="Go Fish!" Height="700" Width="1000" Closing="Window_Closing">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#CCCCCC"/>
@@ -28,7 +28,7 @@
   
                 Width="60"
                 Source="/Images/player1.png"/>
-            <Label Width="100" Height="41" Content=" Player 2"/>
+            <Label Width="100" Height="41" Content=" Player 3"/>
         </StackPanel>
         <StackPanel  VerticalAlignment="Bottom" 
             HorizontalAlignment="Center"
@@ -44,7 +44,7 @@
             <Image
                 Width="60"
                 Source="/Images/player3.png"/>
-            <Label Width="100" Height="41" Content=" Player 1"/>
+            <Label Width="100" Height="41" Content=" Player 2"/>
         </StackPanel>
         <StackPanel  VerticalAlignment="Center" 
             Orientation="Vertical"
@@ -52,7 +52,7 @@
             <Image
                 Width="60"
                 Source="/Images/player2.png"/>
-            <Label Width="100" Height="41" Content=" Player 3"/>
+            <Label Width="100" Height="41" Content=" Player 4"/>
         </StackPanel>
         <Button x:Name="guideButton1" 
             Content="User Guide" 
@@ -85,10 +85,19 @@
             Margin="0, 12, 0, 0"
             VerticalAlignment="Center" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
-        <Image x:Name="deckLayer1" HorizontalAlignment="Center"
-            Margin="0, 15, 0, 0"
-            VerticalAlignment="Center" 
-            Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image x:Name="ai1CardImage" HorizontalAlignment="Left"
+            Margin="46,410,0,0"
+            VerticalAlignment="Top" 
+            Height="51" Source="/Images/Cards/backside90.jpg" RenderTransformOrigin="0.5,0.5" Width="70">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.105"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <Button x:Name="Card13" Margin="632,424,180,160" RenderTransformOrigin="0.5,0.5" Click="Card13_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
@@ -181,7 +190,7 @@
             </Button.Template>
         </Button>
         <Button x:Name="buttonChoosePlayer2" 
-            Content="Choose&#xA;Player 2" 
+            Content="Choose&#xA;Player 3" 
             HorizontalAlignment="Center" 
             Height="60"
             Width="120"
@@ -197,7 +206,7 @@
 
         </Button>
         <Button x:Name="buttonChoosePlayer1" 
-            Content="Choose&#xA;Player 1" 
+            Content="Choose&#xA;Player 2" 
             HorizontalAlignment="Right" 
             Height="60"
             Width="120"
@@ -213,7 +222,7 @@
 
         </Button>
         <Button x:Name="buttonChoosePlayer3" 
-            Content="Choose&#xA;Player 3" 
+            Content="Choose&#xA;Player 4" 
             HorizontalAlignment="Right" 
             Height="60"
             Width="120"
@@ -229,7 +238,7 @@
 
         </Button>
         <Label x:Name="cardLabel" HorizontalContentAlignment="Center"  Content="" HorizontalAlignment="Center" Margin="0,388,0,0" VerticalAlignment="Top" Width="394"/>
-        <Label x:Name="ai1HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="45,409,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ai1HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="22,409,0,0" VerticalAlignment="Top"/>
         <Label x:Name="playerScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="518,591,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ai1ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top"/>
 

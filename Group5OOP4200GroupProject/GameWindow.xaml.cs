@@ -246,8 +246,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(0);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
 
 
         }
@@ -262,8 +262,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(1);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -276,8 +276,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(2);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -290,8 +290,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(3);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -304,8 +304,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(4);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -318,8 +318,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(5);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -332,8 +332,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(6);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -346,8 +346,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(7);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -360,8 +360,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(8);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -374,8 +374,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(9);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -388,8 +388,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(10);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -402,8 +402,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(11);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
 
         /// <summary>
@@ -416,8 +416,8 @@ namespace Group5OOP4200GroupProject
             currentCard = players[0].getCardByIndex(12);
             cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
             buttonChoosePlayer1.IsEnabled = true;
-            buttonChoosePlayer2.IsEnabled = true;
-            buttonChoosePlayer3.IsEnabled = true;
+            //buttonChoosePlayer2.IsEnabled = true;
+            //buttonChoosePlayer3.IsEnabled = true;
         }
         private void checkGameOver()
         {
@@ -450,6 +450,7 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
+                MessageBox.Show("GO FISH!");
                 if (!deck.isEmpty())
                 {
                     Card drawnCard = deck.drawCard();
@@ -500,8 +501,8 @@ namespace Group5OOP4200GroupProject
             InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
-            buttonChoosePlayer2.IsEnabled = false;
-            buttonChoosePlayer3.IsEnabled = false;
+            //buttonChoosePlayer2.IsEnabled = false;
+            //buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
             updateScore();
             getAiHandSizes();
@@ -525,8 +526,10 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
+                MessageBox.Show("GO FISH!");
                 if (!deck.isEmpty())
                 {
+                    
                     Card drawnCard = deck.drawCard();
                     if (players[0].checkHand(drawnCard))
                     {
@@ -575,8 +578,8 @@ namespace Group5OOP4200GroupProject
             InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
-            buttonChoosePlayer2.IsEnabled = false;
-            buttonChoosePlayer3.IsEnabled = false;
+            //buttonChoosePlayer2.IsEnabled = false;
+            //buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
             getAiHandSizes();
             updateScore();
@@ -597,20 +600,23 @@ namespace Group5OOP4200GroupProject
                 players[3].removeCard(currentCard);
                 players[0].addToScore();
             }
-            if (!deck.isEmpty())
+            else
             {
-                Card drawnCard = deck.drawCard();
-                if (players[0].checkHand(drawnCard))
+                MessageBox.Show("GO FISH!");
+                if (!deck.isEmpty())
                 {
-                    players[0].removeCard(drawnCard);
-                    players[0].addToScore();
-                }
-                else
-                {
-                    players[0].addCard(drawnCard);
+                    Card drawnCard = deck.drawCard();
+                    if (players[0].checkHand(drawnCard))
+                    {
+                        players[0].removeCard(drawnCard);
+                        players[0].addToScore();
+                    }
+                    else
+                    {
+                        players[0].addCard(drawnCard);
+                    }
                 }
             }
-            
             if (players[0].isHandEmpty())
             {
                 // Draw new hand if deck has cards 
@@ -646,8 +652,8 @@ namespace Group5OOP4200GroupProject
             InitCheckHand();
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
-            buttonChoosePlayer2.IsEnabled = false;
-            buttonChoosePlayer3.IsEnabled = false;
+            //buttonChoosePlayer2.IsEnabled = false;
+            //buttonChoosePlayer3.IsEnabled = false;
             handDisplay();
             updateScore();
             getAiHandSizes();
