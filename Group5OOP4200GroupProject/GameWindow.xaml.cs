@@ -402,8 +402,9 @@ namespace Group5OOP4200GroupProject
                 if(players[0].getHandSize() == 0)
                 {
                     if (players[1].getHandSize() == 0)
-                    {                       
-                        GameOver go = new GameOver(userScore, ai1Score);                       
+                    {
+                        
+                        GameOver go = new GameOver(players[0].getScore(), players[1].getScore());                       
                         go.ShowDialog();
                     }
                 }
@@ -430,7 +431,7 @@ namespace Group5OOP4200GroupProject
                     Card drawnCard = deck.drawCard();
                     if (players[0].checkHand(drawnCard))
                     {
-                        players[0].removeCard(currentCard);
+                        players[0].removeCard(drawnCard);
                         players[0].addToScore();
                     }
                     else
@@ -503,7 +504,7 @@ namespace Group5OOP4200GroupProject
                     Card drawnCard = deck.drawCard();
                     if (players[0].checkHand(drawnCard))
                     {
-                        players[0].removeCard(currentCard);
+                        players[0].removeCard(drawnCard);
                         players[0].addToScore();
                     }
                     else
@@ -574,7 +575,7 @@ namespace Group5OOP4200GroupProject
                 Card drawnCard = deck.drawCard();
                 if (players[0].checkHand(drawnCard))
                 {
-                    players[0].removeCard(currentCard);
+                    players[0].removeCard(drawnCard);
                     players[0].addToScore();
                 }
                 else
