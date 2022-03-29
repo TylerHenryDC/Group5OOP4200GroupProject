@@ -41,12 +41,12 @@ namespace Group5OOP4200GroupProject
             InitCheckHand();
             handDisplay();
             getAiHandSizes();
-           
+
         }
 
         public void InitCheckHand()
         {
-            foreach(Player player in players)
+            foreach (Player player in players)
             {
                 for (int i = 0; i < player.getHandSize(); i++)
                 {
@@ -204,7 +204,7 @@ namespace Group5OOP4200GroupProject
                                     // Remove the card from hand and increase score
                                     player.removeCard(cardToAsk);
                                     player.addToScore();
-                                                                        
+
 
                                     // Check for empty hand
                                     if (player.isHandEmpty())
@@ -428,7 +428,15 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
+        private void checkDeckEmpty()
+        {
+            if (deck.isEmpty())
+            {
+                GameOver go = new GameOver();
+                go.ShowDialog();
+            }
 
+        }
         /// <summary>
         /// Allows player to choose ai ones hand
         /// </summary>
@@ -444,6 +452,7 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
+                checkDeckEmpty();
                 Card drawnCard = deck.drawCard();
                 if (players[0].checkHand(drawnCard))
                 {
@@ -479,6 +488,7 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
+                checkDeckEmpty();
                 Card drawnCard = deck.drawCard();
                 if (players[0].checkHand(drawnCard))
                 {
@@ -514,6 +524,7 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
+                checkDeckEmpty();
                 Card drawnCard = deck.drawCard();
                 if (players[0].checkHand(drawnCard))
                 {
