@@ -148,6 +148,24 @@ namespace Group5OOP4200GroupProject
                                     isTurn = false;
                                 }
                             }
+
+                            // Check for empty hand
+                            if (playerToAsk.isHandEmpty())
+                            {
+                                // Draw new hand if deck has cards 
+                                if (!deck.isEmpty())
+                                {
+                                    // Draw new hand
+                                    for (int i = 0; i < 7; i++)
+                                    {
+                                        // Make sure there are cards before drawing
+                                        if (!deck.isEmpty())
+                                        {
+                                            playerToAsk.addCard(deck.drawCard());
+                                        }
+                                    }
+                                }
+                            }
                         }
                         else
                         {
@@ -171,7 +189,7 @@ namespace Group5OOP4200GroupProject
                                     player.addToScore();
 
                                     // Change turn flag
-                                    isTurn = true;
+                                    //isTurn = true;
 
                                     // Check for empty hand
                                     if (player.isHandEmpty())
