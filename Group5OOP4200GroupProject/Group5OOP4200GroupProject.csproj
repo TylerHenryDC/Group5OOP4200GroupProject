@@ -61,6 +61,7 @@
     <None Remove="Images\Cards\Qd.png" />
     <None Remove="Images\Cards\Qh.png" />
     <None Remove="Images\Cards\Qs.png" />
+    <None Remove="Images\gameOver.png" />
     <None Remove="Images\logo.ico" />
     <None Remove="Images\player1.png" />
     <None Remove="Images\player2.png" />
@@ -123,6 +124,7 @@
     <Resource Include="Images\Cards\Qd.png" />
     <Resource Include="Images\Cards\Qh.png" />
     <Resource Include="Images\Cards\Qs.png" />
+    <Resource Include="Images\gameOver.png" />
     <Resource Include="Images\logo.ico" />
     <Resource Include="Images\player1.png" />
     <Resource Include="Images\player2.png" />
