@@ -405,8 +405,10 @@ namespace Group5OOP4200GroupProject
                     if (players[1].getHandSize() == 0)
                     {
                         
-                        GameOver go = new GameOver(players[0].getScore(), players[1].getScore());                       
+                        GameOver go = new GameOver(players[0].getScore(), players[1].getScore());
                         go.ShowDialog();
+                        this.Close();
+                        
                     }
                 }
             }
