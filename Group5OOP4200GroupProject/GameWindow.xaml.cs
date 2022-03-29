@@ -104,12 +104,9 @@ namespace Group5OOP4200GroupProject
                 // Only for AI players
                 if (player is AI)
                 {
-                    // Turn Flag
-                    bool isTurn = true;
                     // While they have cards or till turn is done
-                    while (isTurn && !player.isHandEmpty())
+                    if (!player.isHandEmpty())
                     {
-                        isTurn = false;
                         // Get Card and player to ask for
                         Player playerToAsk = player.pickRandomPlayer(players);
                         Card cardToAsk = player.pickRandomCard();
@@ -122,9 +119,6 @@ namespace Group5OOP4200GroupProject
                             // Remove card form  both players hand
                             player.removeCard(cardToAsk);
                             playerToAsk.removeCard(cardToAsk);
-                            handDisplay();
-                            updateScore();
-                            getAiHandSizes();
                             // Increase score of asking player
                             player.addToScore();
 
@@ -143,11 +137,6 @@ namespace Group5OOP4200GroupProject
                                             player.addCard(deck.drawCard());
                                         }
                                     }
-                                }
-                                // End AI turn
-                                else
-                                {
-                                    isTurn = false;
                                 }
                             }
 
@@ -171,9 +160,6 @@ namespace Group5OOP4200GroupProject
                         }
                         else
                         {
-                            // Chenge turen flag
-                            isTurn = false;
-
                             // Check deck
                             if (!deck.isEmpty())
                             {
@@ -182,47 +168,11 @@ namespace Group5OOP4200GroupProject
 
                                 MessageBox.Show(player.ID + " drew a " + drawnCard.cardValue);
 
-                                if (cardToAsk.cardValue == drawnCard.cardValue)
-                                {
-                                    MessageBox.Show(player.ID + " drew what they were asking for.");
-
-                                    // Remove the card from hand and increase score
-                                    player.removeCard(cardToAsk);
-                                    player.addToScore();
-
-                                    // Change turn flag
-                                    //isTurn = true;
-
-                                    // Check for empty hand
-                                    if (player.isHandEmpty())
-                                    {
-                                        // Draw new hand if deck has cards 
-                                        if (!deck.isEmpty())
-                                        {
-                                            // Draw new hand
-                                            for (int i = 0; i < 7; i++)
-                                            {
-                                                // Check if deck if empty
-                                                if (!deck.isEmpty())
-                                                {
-                                                    player.addCard(deck.drawCard());
-                                                }
-                                            }
-                                        }
-                                        // End AI turn
-                                        else
-                                        {
-                                            isTurn = false;
-                                        }
-                                    }
-                                }
                                 // Check if card is in asking palyers hand
-                                else if (player.checkHand(drawnCard))
+                                if (player.checkHand(drawnCard))
                                 {
-                                    MessageBox.Show(player.ID + " did not draw what they were asking for but it was in there hand");
-
                                     // Remove the card from hand and increase score
-                                    player.removeCard(cardToAsk);
+                                    player.removeCard(drawnCard);
                                     player.addToScore();
 
 
@@ -241,12 +191,6 @@ namespace Group5OOP4200GroupProject
                                                     player.addCard(deck.drawCard());
                                                 }
                                             }
-                                        }
-                                        // End AI turn
-                                        else
-                                        {
-                                            MessageBox.Show(player.ID + " Turn end.");
-                                            isTurn = false;
                                         }
                                     }
                                 }
@@ -254,12 +198,15 @@ namespace Group5OOP4200GroupProject
                                 {
                                     // Add the card to hand
                                     player.addCard(drawnCard);
-
                                 }
                             }
                         }
 
+                        // Turn Wrap Up
                         updateScore();
+                        checkGameOver();
+                        handDisplay();
+                        getAiHandSizes();
                     }
                 }
             }
