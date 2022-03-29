@@ -108,6 +108,7 @@ namespace Group5OOP4200GroupProject
                     // While they have cards or till turn is done
                     while (isTurn && !player.isHandEmpty())
                     {
+                        isTurn = false;
                         // Get Card and player to ask for
                         Player playerToAsk = player.pickRandomPlayer(players);
                         Card cardToAsk = player.pickRandomCard();
