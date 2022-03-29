@@ -446,12 +446,18 @@ namespace Group5OOP4200GroupProject
             buttonChoosePlayer2.IsEnabled = true;
             buttonChoosePlayer3.IsEnabled = true;
         }
-        private void checkDeckEmpty()
+        private void checkGameOver()
         {
             if (deck.isEmpty())
             {
-                GameOver go = new GameOver();
-                go.ShowDialog();
+                if(players[0].getHandSize() == 0)
+                {
+                    if (players[1].getHandSize() == 0)
+                    {
+                        GameOver go = new GameOver();                       
+                        go.ShowDialog();
+                    }
+                }
             }
 
         }
@@ -470,18 +476,39 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
-                checkDeckEmpty();
-                Card drawnCard = deck.drawCard();
-                if (players[0].checkHand(drawnCard))
+                if (!deck.isEmpty())
                 {
-                    players[0].removeCard(currentCard);
-                    players[0].addToScore();
-                }
-                else
-                {
-                    players[0].addCard(drawnCard);
+                    Card drawnCard = deck.drawCard();
+                    if (players[0].checkHand(drawnCard))
+                    {
+                        players[0].removeCard(currentCard);
+                        players[0].addToScore();
+                    }
+                    else
+                    {
+                        players[0].addCard(drawnCard);
+                    }
                 }
             }
+            
+            if (players[0].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[0].addCard(deck.drawCard());
+                        }
+                    }
+                }
+            }
+
+            checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
@@ -506,18 +533,38 @@ namespace Group5OOP4200GroupProject
             }
             else
             {
-                checkDeckEmpty();
-                Card drawnCard = deck.drawCard();
-                if (players[0].checkHand(drawnCard))
+                if (!deck.isEmpty())
                 {
-                    players[0].removeCard(currentCard);
-                    players[0].addToScore();
-                }
-                else
-                {
-                    players[0].addCard(drawnCard);
+                    Card drawnCard = deck.drawCard();
+                    if (players[0].checkHand(drawnCard))
+                    {
+                        players[0].removeCard(currentCard);
+                        players[0].addToScore();
+                    }
+                    else
+                    {
+                        players[0].addCard(drawnCard);
+                    }
                 }
             }
+
+            if (players[0].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[0].addCard(deck.drawCard());
+                        }
+                    }
+                }
+            }
+            checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
@@ -540,9 +587,8 @@ namespace Group5OOP4200GroupProject
                 players[3].removeCard(currentCard);
                 players[0].addToScore();
             }
-            else
+            if (!deck.isEmpty())
             {
-                checkDeckEmpty();
                 Card drawnCard = deck.drawCard();
                 if (players[0].checkHand(drawnCard))
                 {
@@ -554,6 +600,24 @@ namespace Group5OOP4200GroupProject
                     players[0].addCard(drawnCard);
                 }
             }
+            
+            if (players[0].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i< 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[0].addCard(deck.drawCard());
+                        }
+                    }                   
+                }
+            }
+            checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
             buttonChoosePlayer3.IsEnabled = false;
