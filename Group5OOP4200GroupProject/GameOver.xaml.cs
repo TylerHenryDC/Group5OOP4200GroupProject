@@ -29,6 +29,7 @@ namespace Group5OOP4200GroupProject
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
+            Environment.Exit(1);
             Close();
         }
 
