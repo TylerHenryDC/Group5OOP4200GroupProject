@@ -38,8 +38,33 @@ namespace Group5OOP4200GroupProject
             players = new List<Player> { Player1, Player2 };
 
             deck.deal(ref players);
+            InitCheckHand();
             handDisplay();
             getAiHandSizes();
+        }
+
+        public void InitCheckHand()
+        {
+            foreach(Player player in players)
+            {
+                for (int i = 0; i < player.getHandSize(); i++)
+                {
+                    for (int x = i + 1; x < player.getHandSize(); x++)
+                    {
+                        if (player.getCardByIndex(i).cardValue == player.getCardByIndex(x).cardValue)
+                        {
+                            Card cardToRemove = player.getCardByIndex(x);
+
+                            player.removeCard(cardToRemove);
+                            player.removeCard(cardToRemove);
+
+                            player.addToScore();
+                        }
+                    }
+                }
+            }
+
+            updateScore();
         }
 
         /// <summary>
