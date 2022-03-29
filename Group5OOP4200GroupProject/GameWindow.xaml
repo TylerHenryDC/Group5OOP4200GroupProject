@@ -22,7 +22,7 @@
         </Style>
 
     </Window.Resources>
-    <Grid Width="900">
+    <Grid Width="900" RenderTransformOrigin="0.502,0.518">
         <StackPanel  VerticalAlignment="Top" Orientation="Vertical">
             <Image
   
@@ -84,6 +84,10 @@
         <Image x:Name="deckLayer2" HorizontalAlignment="Center" 
             Margin="0, 12, 0, 0"
             VerticalAlignment="Center" 
+            Height="70" Source="/Images/Cards/backside90.jpg"/>
+        <Image x:Name="deckLayer1" HorizontalAlignment="Center" 
+            Margin="0,313,0,0"
+            VerticalAlignment="Top" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="ai1CardImage" HorizontalAlignment="Left"
             Margin="46,410,0,0"
