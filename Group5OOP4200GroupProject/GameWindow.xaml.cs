@@ -207,6 +207,7 @@ namespace Group5OOP4200GroupProject
                         checkGameOver();
                         handDisplay();
                         getAiHandSizes();
+                        InitCheckHand();
                     }
                 }
             }
