@@ -69,6 +69,8 @@
             </Button.Resources>
 
         </Button>
+        <Label x:Name="userScoreLabel" Content="User Score: 0" HorizontalAlignment="Left" Margin="282,485,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ai1ScoreLabel" Content="Ai 1 Score: 0" HorizontalAlignment="Left" Margin="297,527,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

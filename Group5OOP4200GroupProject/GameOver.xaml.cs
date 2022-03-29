@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Group5OOP4200GroupProject.Class;
 
 namespace Group5OOP4200GroupProject
 {
@@ -19,9 +20,11 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameOver : Window
     {
-        public GameOver()
+        public GameOver(int userScore, int ai1Score)
         {
             InitializeComponent();
+            userScoreLabel.Content = "User Score: " + userScore;
+            ai1ScoreLabel.Content = "Ai1 Score: " + ai1Score;
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)

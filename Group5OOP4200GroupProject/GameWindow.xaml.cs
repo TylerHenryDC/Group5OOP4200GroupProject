@@ -22,7 +22,8 @@ namespace Group5OOP4200GroupProject
     {
         private List<Player> players;
         private Deck deck;
-
+        public int userScore;
+        public int ai1Score;
         Card currentCard = new Card();
         public GameWindow()
         {
@@ -454,8 +455,8 @@ namespace Group5OOP4200GroupProject
                 if(players[0].getHandSize() == 0)
                 {
                     if (players[1].getHandSize() == 0)
-                    {
-                        GameOver go = new GameOver();                       
+                    {                       
+                        GameOver go = new GameOver(userScore, ai1Score);                       
                         go.ShowDialog();
                     }
                 }
@@ -504,6 +505,22 @@ namespace Group5OOP4200GroupProject
                         if (!deck.isEmpty())
                         {
                             players[0].addCard(deck.drawCard());
+                        }
+                    }
+                }
+            }
+            if (players[1].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[1].addCard(deck.drawCard());
                         }
                     }
                 }
@@ -565,6 +582,22 @@ namespace Group5OOP4200GroupProject
                     }
                 }
             }
+            if (players[2].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[2].addCard(deck.drawCard());
+                        }
+                    }
+                }
+            }
             checkGameOver();
             buttonChoosePlayer1.IsEnabled = false;
             buttonChoosePlayer2.IsEnabled = false;
@@ -616,6 +649,22 @@ namespace Group5OOP4200GroupProject
                             players[0].addCard(deck.drawCard());
                         }
                     }                   
+                }
+            }
+            if (players[3].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[3].addCard(deck.drawCard());
+                        }
+                    }
                 }
             }
             checkGameOver();
