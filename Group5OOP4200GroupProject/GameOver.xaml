@@ -24,11 +24,11 @@
     </Window.Resources>
     <Grid>
         <Button x:Name="playAgainButton" 
-            Content="Play Again!" 
+            Content="Return to Menu!" 
             HorizontalAlignment="Left" 
-            Margin="250,370,0,0" 
+            Margin="215,370,0,0" 
             VerticalAlignment="Top"
-            Height="75" Width="150" 
+            Height="75" Width="185" 
             Click="playAgainButton_Click" 
             >
             <Button.Resources>
