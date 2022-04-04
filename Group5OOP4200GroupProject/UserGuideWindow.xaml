@@ -29,7 +29,7 @@
                 Margin="2, 2, 0, 0"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top"
-            Height="75" Width="150" 
+            Height="60" Width="100" 
             Click="playAgainButton_Click" 
             >
             <Button.Resources>

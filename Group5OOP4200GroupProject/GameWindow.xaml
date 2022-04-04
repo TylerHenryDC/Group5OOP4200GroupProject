@@ -60,7 +60,7 @@
             Height="54"
             Width="120"
             FontSize="23"
-            VerticalAlignment="Top" Click="guideButton_Click" 
+            VerticalAlignment="Top" Click="guideButton_Click" Margin="0,0,-50,0" 
                 >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
