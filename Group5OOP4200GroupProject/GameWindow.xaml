@@ -70,23 +70,23 @@
 
         </Button>
         <Image x:Name="deckLayer5" HorizontalAlignment="Center" 
-            VerticalAlignment="Center" 
-            Margin="0, 3, 0, 0"
+            VerticalAlignment="Top" 
+            Margin="0, 265, 0, 0"
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="deckLayer4" HorizontalAlignment="Center"
-            Margin="0, 6, 0, 0"
-            VerticalAlignment="Center" 
+            Margin="0, 269, 0, 0"
+            VerticalAlignment="Top" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="deckLayer3" HorizontalAlignment="Center" 
-            Margin="0, 9, 0, 0"
-            VerticalAlignment="Center" 
+            Margin="0, 273, 0, 0"
+            VerticalAlignment="Top" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="deckLayer2" HorizontalAlignment="Center" 
-            Margin="0, 12, 0, 0"
-            VerticalAlignment="Center" 
+            Margin="0, 277, 0, 0"
+            VerticalAlignment="Top" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="deckLayer1" HorizontalAlignment="Center" 
-            Margin="0,313,0,0"
+            Margin="0,281,0,0"
             VerticalAlignment="Top" 
             Height="70" Source="/Images/Cards/backside90.jpg"/>
         <Image x:Name="ai1CardImage" HorizontalAlignment="Left"

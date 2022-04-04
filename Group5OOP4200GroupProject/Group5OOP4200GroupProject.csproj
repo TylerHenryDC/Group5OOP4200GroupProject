@@ -44,7 +44,6 @@
     <None Remove="Images\Cards\9h.png" />
     <None Remove="Images\Cards\9s.png" />
     <None Remove="Images\Cards\Ac.png" />
-    <None Remove="Images\Cards\Ad.png" />
     <None Remove="Images\Cards\Ah.png" />
     <None Remove="Images\Cards\As.png" />
     <None Remove="Images\Cards\backside.jpg" />
@@ -107,7 +106,6 @@
     <Resource Include="Images\Cards\9h.png" />
     <Resource Include="Images\Cards\9s.png" />
     <Resource Include="Images\Cards\Ac.png" />
-    <Resource Include="Images\Cards\Ad.png" />
     <Resource Include="Images\Cards\Ah.png" />
     <Resource Include="Images\Cards\As.png" />
     <Resource Include="Images\Cards\backside.jpg" />
