@@ -16,6 +16,7 @@
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#CCCCCC"/>
+            <Setter Property="Cursor" Value="Hand"/>
 
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="#353535"/>

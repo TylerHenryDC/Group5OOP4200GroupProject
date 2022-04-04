@@ -16,7 +16,7 @@
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#CCCCCC"/>
-
+            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="#353535"/>
         </Style>
@@ -60,7 +60,7 @@
             Height="54"
             Width="120"
             FontSize="23"
-            VerticalAlignment="Top" Click="guideButton_Click" Margin="0,0,-50,0" 
+            VerticalAlignment="Top" Click="guideButton_Click" Margin="0,0,-38,0" 
                 >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -102,91 +102,94 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="Card13" Margin="632,424,180,160" RenderTransformOrigin="0.5,0.5" Click="Card13_Click">
+        <Button x:Name="Card13" Cursor="Hand" Margin="632,424,180,160" RenderTransformOrigin="0.5,0.5" Click="Card13_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card11" Margin="595,424,217,160" RenderTransformOrigin="0.5,0.5" Click="Card11_Click">
+        <Button x:Name="Card11" Cursor="Hand" Margin="595,424,217,160" RenderTransformOrigin="0.5,0.5" Click="Card11_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card9" Margin="559,424,253,160" RenderTransformOrigin="0.5,0.5" Click="Card9_Click">
+        <Button x:Name="Card9" Cursor="Hand" Margin="559,424,253,160" RenderTransformOrigin="0.5,0.5" Click="Card9_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card7" Margin="518,424,294,160" RenderTransformOrigin="0.5,0.5" Click="Card7_Click">
+        <Button x:Name="Card7" Cursor="Hand" Margin="518,424,294,160" RenderTransformOrigin="0.5,0.5" Click="Card7_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card5" Margin="481,424,331,160" RenderTransformOrigin="0.5,0.5" Click="Card5_Click">
+        <Button x:Name="Card5" Cursor="Hand" Margin="481,424,331,160" RenderTransformOrigin="0.5,0.5" Click="Card5_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card3" Margin="444,424,368,160" RenderTransformOrigin="0.5,0.5" Click="Card3_Click">
+        <Button x:Name="Card3" Cursor="Hand" Margin="444,424,368,160" RenderTransformOrigin="0.5,0.5" Click="Card3_Click">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        <Button x:Name="Card1" Cursor="Hand" Margin="408,424,404,160" RenderTransformOrigin="0.5,0.5" Click="Card1_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card1" Margin="408,424,404,160" RenderTransformOrigin="0.5,0.5" Click="Card1_Click">
+        <Button x:Name="Card2" Cursor="Hand"  Margin="367,424,445,160" RenderTransformOrigin="0.5,0.5" Click="Card2_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="{TemplateBinding Content}"/>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        <Button x:Name="Card4" Cursor="Hand" Margin="333,424,479,160" RenderTransformOrigin="0.5,0.5" Click="Card4_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card2" Margin="367,424,445,160" RenderTransformOrigin="0.5,0.5" Click="Card2_Click">
+        <Button x:Name="Card6" Cursor="Hand"  Margin="296,424,516,160" RenderTransformOrigin="0.5,0.5" Click="Card6_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card4" Margin="333,424,479,160" RenderTransformOrigin="0.5,0.5" Click="Card4_Click">
+        <Button x:Name="Card8" Cursor="Hand" Margin="260,424,552,160" RenderTransformOrigin="0.5,0.5" Click="Card8_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card6" Margin="296,424,516,160" RenderTransformOrigin="0.5,0.5" Click="Card6_Click">
+        <Button x:Name="Card10" Cursor="Hand" Margin="219,424,593,160" RenderTransformOrigin="0.5,0.5" Click="Card10_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="Card8" Margin="260,424,552,160" RenderTransformOrigin="0.5,0.5" Click="Card8_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Image Source="{TemplateBinding Content}"/>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Button x:Name="Card10" Margin="219,424,593,160" RenderTransformOrigin="0.5,0.5" Click="Card10_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Image Source="{TemplateBinding Content}"/>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Button x:Name="Card12" Margin="187,424,625,160" RenderTransformOrigin="0.5,0.5" Click="Card12_Click">
+        <Button x:Name="Card12" Cursor="Hand" Margin="187,424,625,160" RenderTransformOrigin="0.5,0.5" Click="Card12_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image Source="{TemplateBinding Content}"/>
