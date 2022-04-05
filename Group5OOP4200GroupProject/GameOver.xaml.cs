@@ -27,11 +27,11 @@ namespace Group5OOP4200GroupProject
             ai1ScoreLabel.Content = "Ai1 Score: " + Scores[1];
             if(Scores.Count >= 3)
             {
-                ai2ScoreLabel.Content = "Ai2 Score: " + Scores[2];
+                //ai2ScoreLabel.Content = "Ai2 Score: " + Scores[2];
             }
             if (Scores.Count == 4)
             {
-                ai3ScoreLabel.Content = "Ai3 Score: " + Scores[3];
+                //ai3ScoreLabel.Content = "Ai3 Score: " + Scores[3];
             }
         }
 

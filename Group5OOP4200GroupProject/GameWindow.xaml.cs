@@ -506,7 +506,7 @@ namespace Group5OOP4200GroupProject
                 players[0].removeCard(currentCard);
                 players[p].removeCard(currentCard);
                 players[0].addToScore();
-                MessageBox.Show("Player " + p + " had a" + currentCard.cardValue + ". You gain a point.");
+                MessageBox.Show("Player " + p + " had a " + currentCard.cardValue + ". You gain a point.");
             }
             else
             {
