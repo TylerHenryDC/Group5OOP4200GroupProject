@@ -59,7 +59,7 @@ namespace Group5OOP4200GroupProject
 
                             player.removeCard(cardToRemove);
                             player.removeCard(cardToRemove);
-
+                            MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
                             player.addToScore();
                         }
                     }
@@ -514,14 +514,17 @@ namespace Group5OOP4200GroupProject
                 if (!deck.isEmpty())
                 {
                     Card drawnCard = deck.drawCard();
+
                     if (players[0].checkHand(drawnCard))
                     {
                         players[0].removeCard(drawnCard);
                         players[0].addToScore();
+                        MessageBox.Show("You drew a " + drawnCard.cardValue + ". You now have a pair and you gain a point.");
                     }
                     else
                     {
                         players[0].addCard(drawnCard);
+                        MessageBox.Show("You drew a " + drawnCard.cardValue);
                     }
                 }
             }
