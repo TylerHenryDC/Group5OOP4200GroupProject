@@ -20,11 +20,19 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameOver : Window
     {
-        public GameOver(int userScore, int ai1Score)
+        public GameOver(List<int> Scores)
         {
             InitializeComponent();
-            userScoreLabel.Content = "User Score: " + userScore;
-            ai1ScoreLabel.Content = "Ai1 Score: " + ai1Score;
+            userScoreLabel.Content = "User Score: " + Scores[0];
+            ai1ScoreLabel.Content = "Ai1 Score: " + Scores[1];
+            if(Scores.Count >= 3)
+            {
+                ai2ScoreLabel.Content = "Ai2 Score: " + Scores[2];
+            }
+            if (Scores.Count == 4)
+            {
+                ai3ScoreLabel.Content = "Ai3 Score: " + Scores[3];
+            }
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
