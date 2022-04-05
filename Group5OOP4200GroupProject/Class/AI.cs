@@ -10,8 +10,8 @@ namespace Group5OOP4200GroupProject.Class
     {
         // Variables
         private Enums.difficulty aiDifficulty;
-        private Queue<int> playerAsked;
-        private Queue<Enums.value> valueAsked;
+        private List<int> playerAsked;
+        private List<Enums.value> valueAsked;
         private Random rand;
 
         // Constructor
@@ -25,6 +25,8 @@ namespace Group5OOP4200GroupProject.Class
             // Set difficulty and create random class object
             aiDifficulty = difficulty;
             rand = new Random();
+            playerAsked = new List<int>();
+            valueAsked = new List<Enums.value>();
         }
 
         // Methods
@@ -74,6 +76,81 @@ namespace Group5OOP4200GroupProject.Class
         {
             get { return aiDifficulty;  }
             set { aiDifficulty = value;  }
+        }
+
+        /// <summary>
+        /// Player and card info to ai memory
+        /// </summary>
+        /// <param name="player">The player to remember</param>
+        /// <param name="card">The card value to remember</param>
+        public void addToMemory(Player player, Card card)
+        {
+            // Add the ID and card value to memory
+            playerAsked.Add(player.ID);
+            valueAsked.Add(card.cardValue);
+            
+            // Check to much in memory
+            if (valueAsked.Count > (int)aiDifficulty)
+            {
+                // Forget some old values
+                playerAsked.RemoveAt(0);
+                valueAsked.RemoveAt(0);
+            }
+        }
+
+        /// <summary>
+        /// Check the ai hand to see if any cards in it match the memory
+        /// </summary>
+        /// <returns></returns>
+        public int compareHandToMemory()
+        {
+            bool haveCard = false;
+            int index = 0;
+            // Loop through till a card matching card and memory is found
+            // or there are no more cards in memeory
+            while(index < valueAsked.Count && !haveCard)
+            {
+                // Compare the card values to current index of memory values
+                if (hand.Any(x => x.cardValue == valueAsked[index]))
+                {
+                    // Set true if one is found
+                    haveCard = true;
+                }
+                else
+                {
+                    // Else increment index
+                    index++;
+                }
+            }
+
+            // If index equal value asked count set index to failed number
+            if (index == valueAsked.Count)
+            {
+                index = -1;
+            }
+
+            return index;
+        }
+
+        /// <summary>
+        /// Get a player matching id of memory at given index
+        /// </summary>
+        /// <param name="players">List of players to search</param>
+        /// <param name="memoryIndex">Memory index</param>
+        /// <returns></returns>
+        public Player getPlayFromMemory(List<Player> players, int memoryIndex)
+        {
+            return players.Find(x => x.ID == playerAsked[memoryIndex]);
+        }
+
+        /// <summary>
+        /// Get card from hand that matched value at memory index
+        /// </summary>
+        /// <param name="memoryIndex"></param>
+        /// <returns></returns>
+        public Card getCardFromMemory(int memoryIndex)
+        {
+            return hand.Find(x => x.cardValue == valueAsked[memoryIndex]);
         }
     }
 }

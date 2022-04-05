@@ -34,8 +34,8 @@ namespace Group5OOP4200GroupProject.Class
         public enum difficulty
         {
             Easy = 1,
-            Medium = 2,
-            Hard = 3
+            Medium = 5,
+            Hard = 10
         }
     }
 }
