@@ -29,7 +29,7 @@
                 Cursor="Hand"
                 Content="Play" 
                 HorizontalAlignment="Left" 
-                Margin="250,370,0,0" 
+                Margin="256,451,0,0" 
                 VerticalAlignment="Top"
                 Height="75" Width="150" 
                 Click="playButton_Click">
@@ -44,7 +44,7 @@
                 Cursor="Hand"
                 Content="Quit" 
                 HorizontalAlignment="Left" 
-                Margin="500,370,0,0" 
+                Margin="506,451,0,0" 
                 VerticalAlignment="Top" 
                 Height="75" Width="150" 
                 Click="quitButton_Click">
@@ -74,11 +74,19 @@
         </Button>
         <Label Content="Go Fish" 
                Foreground="#353535"
-               Margin="0,0,0, 200"
+               Margin="0,95,0,0"
                HorizontalAlignment="Center" 
-               FontSize="40"
-               VerticalAlignment="Center" 
+               FontSize="60"
+               VerticalAlignment="Top" Height="87" Width="204" 
                />
+        <Label Content="Number Of Opponents:" HorizontalAlignment="Left" Height="42" Margin="70,229,0,0" VerticalAlignment="Top" Width="261"/>
+        <RadioButton Content="1 Player" HorizontalAlignment="Left" Margin="331,238,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="2 Players" HorizontalAlignment="Left" Margin="331,297,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="3 Players" HorizontalAlignment="Left" Margin="331,353,0,0" VerticalAlignment="Top" />
+        <Label Content="Select Difficulty:" HorizontalAlignment="Left" Height="42" Margin="489,231,0,0" VerticalAlignment="Top" Width="184"/>
+        <RadioButton Content="Easy" HorizontalAlignment="Left" Margin="684,236,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="Normal" HorizontalAlignment="Left" Margin="684,295,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="Hard" HorizontalAlignment="Left" Margin="684,346,0,0" VerticalAlignment="Top" />
 
 
     </Grid>
