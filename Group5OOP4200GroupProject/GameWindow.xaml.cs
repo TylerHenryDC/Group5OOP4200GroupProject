@@ -129,9 +129,26 @@ namespace Group5OOP4200GroupProject
                     // While they have cards or till turn is done
                     if (!player.isHandEmpty())
                     {
-                        // Get Card and player to ask for
-                        Player playerToAsk = player.pickRandomPlayer(players);
-                        Card cardToAsk = player.pickRandomCard();
+                        // Create object for asking
+                        Player playerToAsk;
+                        Card cardToAsk;
+
+                        // Check the player memory
+                        int memoryIndex = player.compareHandToMemory();
+                        
+                        // If something is found in memory
+                        if (memoryIndex >= 0)
+                        {
+                            // Get that player and card
+                            playerToAsk = player.getPlayFromMemory(players, memoryIndex);
+                            cardToAsk = player.getCardFromMemory(memoryIndex);
+                        }
+                        else
+                        {
+                            // Get random player and card
+                            playerToAsk = player.pickRandomPlayer(players);
+                            cardToAsk = player.pickRandomCard();
+                        }
 
                         MessageBox.Show(player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
 
@@ -150,15 +167,9 @@ namespace Group5OOP4200GroupProject
                                 // Draw new hand if deck has cards 
                                 if (!deck.isEmpty())
                                 {
-                                    // Draw new hand
-                                    for (int i = 0; i < 7; i++)
-                                    {
-                                        // Make sure there are cards before drawing
-                                        if (!deck.isEmpty())
-                                        {
-                                            player.addCard(deck.drawCard());
-                                        }
-                                    }
+                                    // Copy the AI player and draw new hand
+                                    Player drawPlayer = player;
+                                    deck.drawHand(ref drawPlayer);
                                 }
                             }
 
@@ -168,20 +179,24 @@ namespace Group5OOP4200GroupProject
                                 // Draw new hand if deck has cards 
                                 if (!deck.isEmpty())
                                 {
-                                    // Draw new hand
-                                    for (int i = 0; i < 7; i++)
-                                    {
-                                        // Make sure there are cards before drawing
-                                        if (!deck.isEmpty())
-                                        {
-                                            playerToAsk.addCard(deck.drawCard());
-                                        }
-                                    }
+                                    deck.drawHand(ref playerToAsk);
+
                                 }
                             }
                         }
                         else
                         {
+                            // Other AI needs to remember this failed request
+                            foreach (AI otherAI in players)
+                            {
+                                // Check for type AI and that it isn't the asking AI
+                                if (otherAI is AI && otherAI != player)
+                                {
+                                    // Add the asking AI and card to memory
+                                    otherAI.addToMemory(player, cardToAsk);
+                                }
+                            }
+
                             // Check deck
                             if (!deck.isEmpty())
                             {
@@ -204,14 +219,12 @@ namespace Group5OOP4200GroupProject
                                         // Draw new hand if deck has cards 
                                         if (!deck.isEmpty())
                                         {
-                                            // Draw new hand
-                                            for (int i = 0; i < 7; i++)
+                                            // Draw new hand if deck has cards 
+                                            if (!deck.isEmpty())
                                             {
-                                                // Check if deck if empty
-                                                if (!deck.isEmpty())
-                                                {
-                                                    player.addCard(deck.drawCard());
-                                                }
+                                                // Copy the AI player and draw new hand
+                                                Player drawPlayer = player;
+                                                deck.drawHand(ref drawPlayer);
                                             }
                                         }
                                     }
