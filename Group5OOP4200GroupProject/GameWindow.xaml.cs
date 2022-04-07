@@ -524,6 +524,14 @@ namespace Group5OOP4200GroupProject
             else
             {
                 MessageBox.Show("GO FISH!");
+                // Add the failed asked to ai memory
+                foreach (AI aiPlayer in players)
+                {
+                    if (aiPlayer is AI)
+                    {
+                        aiPlayer.addToMemory(players[0], currentCard);
+                    }
+                }
                 if (!deck.isEmpty())
                 {
                     Card drawnCard = deck.drawCard();
