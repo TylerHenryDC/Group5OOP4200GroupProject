@@ -23,7 +23,7 @@
         </Style>
 
     </Window.Resources>
-
+<Grid>
     <Grid>
         <Button x:Name="goBackButton" 
             Content="Back" 
@@ -38,14 +38,60 @@
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
-
         </Button>
-        <TextBlock Height="300"
-                   Width="800"
-                   Background="#EBEAEA"
-                   Margin="40, 100, 0, 0"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"><Run Text="This is how you play the game: La-La-La"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="...."/><LineBreak/><Run Text="..."/><LineBreak/><Run Text="..."/><LineBreak/><Run Text="...."/></TextBlock>
-
     </Grid>
+    <Grid Margin="0,69,0,0">
+        
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Margin="0,0,0,-10">
+            <TextBlock Height="Auto"
+                   Width="808"
+                   Background="#EBEAEA"
+                   Margin="40, 0, 0, 0"><Run Text="How to play: GO Fish"/><LineBreak/><Run/><LineBreak/>
+                   <Run Text="THE PACK"/><LineBreak/>
+                   <Run Text="The standard 52-card pack is used. Some cards will be dealt and the"/><LineBreak/>
+                   <Run Text="rest will form the stock pile"/><LineBreak/><LineBreak/>
+                   <Run Text="OBJECT OF THE GAME"/><LineBreak/>
+                   <Run Text="The goal is to win the most 'books' of cards. A book is any pair of a kind,"/><LineBreak/>
+                   <Run Text="such as two kings, two aces, and so on."></Run><LineBreak/><LineBreak/>
+                   <Run Text="RANK OF CARDS"/><LineBreak/>
+                   <Run Text="The cards rank from ace (high) to two (low). The suits are not important, "/><LineBreak/>
+                   <Run Text="only the card numbers are relevant, such as two 3s, two 10s, and so on."></Run><LineBreak/><LineBreak/>
+                   <Run Text="THE DEAL"/><LineBreak/>
+                   <Run Text="Any player deals one card face up to each player. The player with the "/><LineBreak/>
+                   <Run Text="lowest card is the dealer. The dealer shuffles the cards, and the player to"></Run><LineBreak/>
+                   <Run Text="the right cuts them. "/><LineBreak/>
+                   <Run Text="The dealer completes the cut and deals the cards clockwise one at a time,"/><LineBreak/>
+                   <Run Text="face down, beginning with the player to the left. If two or three"/><LineBreak/>
+                   <Run Text="people are playing, each player receives seven cards. If four people are"/><LineBreak/>
+                   <Run Text="playing, each receives five cards. The remainder of the pack is"/><LineBreak/>
+                   <Run Text="placed face down on the table to form the stock."/><LineBreak/><LineBreak/>
+                   <Run Text="THE PLAY"/><LineBreak/>
+                   <Run Text="The player to the left of the dealer looks directly at any opponent and says, "/><LineBreak/>
+                   <Run Text="for example, 'Give me your kings', usually addressing the opponent by name"></Run><LineBreak/>
+                   <Run Text="and specifying the rank that they want, from ace down to two. The player"/><LineBreak/>
+                   <Run Text="who is 'fishing' must have at least one card of the rank that was asked"/><LineBreak/>
+                   <Run Text="for in their hand. The player who is addressed must hand over all the"/><LineBreak/>
+                   <Run Text="cards requested. If the player has none, they say, 'Go fish!' and the"/><LineBreak/>
+                   <Run Text="player who made the request draws the top card of the stock and places"/><LineBreak/>
+                   <Run Text="it in their hand."/><LineBreak/>
+                   <Run Text="If a player gets one or more cards of the named rank that was asked for,"/><LineBreak/>
+                   <Run Text="they are entitled to ask the same or another player for a card. The"/><LineBreak/>
+                   <Run Text="player can ask for the same card or a different one. So long as the player"></Run><LineBreak/>
+                   <Run Text="succeeds in getting cards (makes a catch), their turn continues. When a"/><LineBreak/>
+                   <Run Text="player makes a catch, they must reveal the card so that the catch is"/><LineBreak/>
+                   <Run Text="verified. If a player gets the second card of a book, the player shows"/><LineBreak/>
+                   <Run Text="cards requested. If the player has none, they say, 'Go fish!' and the"/><LineBreak/>
+                   <Run Text="pair of cards, places them on the table face up in front of everyone,"/><LineBreak/>
+                   <Run Text="and plays again."/><LineBreak/>
+                   <Run Text="If the player goes fishing without 'making a catch' (does not "/><LineBreak/>
+                   <Run Text="receive a card he asked for), the turn passes to the left."/><LineBreak/>
+                   <Run Text="The game ends when all thirteen books have been won. The winner"/><LineBreak/>
+                   <Run Text="is the player with the most books. During the game, if a player"></Run><LineBreak/>
+                   <Run Text="is left without cards, they may (when it's their turn to play), draw "/><LineBreak/>
+                   <Run Text="from the stock and then ask for cards of that rank. If there are "/><LineBreak/>
+                   <Run Text="no cards left in the stock, they are out of the game."/><LineBreak/><LineBreak/>
+            </TextBlock>
+        </ScrollViewer>
+        </Grid>
+</Grid>
 </Window>
