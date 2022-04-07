@@ -59,7 +59,7 @@ namespace Group5OOP4200GroupProject
 
                             player.removeCard(cardToRemove);
                             player.removeCard(cardToRemove);
-
+                            MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
                             player.addToScore();
                         }
                     }
@@ -87,16 +87,16 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-           // MessageBox.Show("Are you sure you want to quit?");
+            // MessageBox.Show("Are you sure you want to quit?");
 
         }
         private void deckImageSize()
         {
-            if(deck.getDeckSize() < 32)
+            if (deck.getDeckSize() < 32)
             {
                 deckLayer1.Visibility = Visibility.Hidden;
             }
-            if(deck.getDeckSize() < 24)
+            if (deck.getDeckSize() < 24)
             {
                 deckLayer2.Visibility = Visibility.Hidden;
             }
@@ -256,11 +256,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card1_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(0);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(0);
+            buttonEnable();
 
 
         }
@@ -272,11 +269,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card2_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(1);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(1);
+            buttonEnable();
         }
 
         /// <summary>
@@ -286,11 +280,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card3_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(2);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(2);
+            buttonEnable();
         }
 
         /// <summary>
@@ -300,11 +291,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card4_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(3);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(3);
+            buttonEnable();
         }
 
         /// <summary>
@@ -314,11 +302,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card5_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(4);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(4);
+            buttonEnable();
         }
 
         /// <summary>
@@ -328,11 +313,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card6_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(5);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(5);
+            buttonEnable();
         }
 
         /// <summary>
@@ -342,11 +324,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card7_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(6);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(6);
+            buttonEnable();
         }
 
         /// <summary>
@@ -356,11 +335,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card8_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(7);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(7);
+            buttonEnable();
         }
 
         /// <summary>
@@ -370,11 +346,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card9_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(8);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(8);
+            buttonEnable();
         }
 
         /// <summary>
@@ -384,11 +357,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card10_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(9);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(9);
+            buttonEnable();
         }
 
         /// <summary>
@@ -398,11 +368,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card11_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(10);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(10);
+            buttonEnable();
         }
 
         /// <summary>
@@ -412,11 +379,8 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card12_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(11);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(11);
+            buttonEnable();
         }
 
         /// <summary>
@@ -426,27 +390,38 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void Card13_Click(object sender, RoutedEventArgs e)
         {
-            currentCard = players[0].getCardByIndex(12);
-            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
-            buttonChoosePlayer1.IsEnabled = true;
-            //buttonChoosePlayer2.IsEnabled = true;
-            //buttonChoosePlayer3.IsEnabled = true;
+            selectCard(13);
+            buttonEnable();
         }
         private void checkGameOver()
         {
+            
             if (deck.isEmpty())
             {
-                if(players[0].getHandSize() == 0)
+                bool gameOver = true;
+                for (int i = 0; i < players.Count; i++)
                 {
-                    if (players[1].getHandSize() == 0)
-                    {                      
-                        GameOver go = new GameOver(players[0].getScore(), players[1].getScore());
-                        go.ShowDialog();
-                        this.Close();                       
+                    if(players[i].getHandSize() != 0)
+                    {
+                        gameOver = false;
                     }
                 }
+                if (gameOver == true)
+                {
+                    GameOver go = new GameOver(grabScores());
+                    go.ShowDialog();
+                    this.Close();
+                }
+            }            
+        }
+        private List<int> grabScores()
+        {
+            List<int> Scores = new List<int>();
+            for (int i = 0; i < players.Count; i++)
+            {
+                Scores.Add(players[i].getScore());
             }
-
+            return Scores;
         }
         /// <summary>
         /// Allows player to choose ai ones hand
@@ -455,67 +430,12 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void buttonChoosePlayer1_Click(object sender, RoutedEventArgs e)
         {
-            if (players[1].checkHand(currentCard))
-            {
-                players[0].removeCard(currentCard);
-                players[1].removeCard(currentCard);
-                players[0].addToScore();
-            }
-            else
-            {
-                MessageBox.Show("GO FISH!");
-                if (!deck.isEmpty())
-                {
-                    Card drawnCard = deck.drawCard();
-                    if (players[0].checkHand(drawnCard))
-                    {
-                        players[0].removeCard(drawnCard);
-                        players[0].addToScore();
-                    }
-                    else
-                    {
-                        players[0].addCard(drawnCard);
-                    }
-                }
-            }
-            
-            if (players[0].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i < 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[0].addCard(deck.drawCard());
-                        }
-                    }
-                }
-            }
-            if (players[1].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i < 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[1].addCard(deck.drawCard());
-                        }
-                    }
-                }
-            }
+            selectPlayer(1);
+            fillHandIfEmpty(0);
+            fillHandIfEmpty(1);
             InitCheckHand();
             checkGameOver();
-            buttonChoosePlayer1.IsEnabled = false;
-            //buttonChoosePlayer2.IsEnabled = false;
-            //buttonChoosePlayer3.IsEnabled = false;
+            buttonDisable();
             handDisplay();
             updateScore();
             getAiHandSizes();
@@ -531,68 +451,13 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void buttonChoosePlayer2_Click(object sender, RoutedEventArgs e)
         {
-            if (players[2].checkHand(currentCard))
-            {
-                players[0].removeCard(currentCard);
-                players[2].removeCard(currentCard);
-                players[0].addToScore();
-            }
-            else
-            {
-                MessageBox.Show("GO FISH!");
-                if (!deck.isEmpty())
-                {
-                    
-                    Card drawnCard = deck.drawCard();
-                    if (players[0].checkHand(drawnCard))
-                    {
-                        players[0].removeCard(drawnCard);
-                        players[0].addToScore();
-                    }
-                    else
-                    {
-                        players[0].addCard(drawnCard);
-                    }
-                }
-            }
 
-            if (players[0].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i < 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[0].addCard(deck.drawCard());
-                        }
-                    }
-                }
-            }
-            if (players[2].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i < 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[2].addCard(deck.drawCard());
-                        }
-                    }
-                }
-            }
+            selectPlayer(2);
+            fillHandIfEmpty(0);
+            fillHandIfEmpty(2);
             InitCheckHand();
             checkGameOver();
-            buttonChoosePlayer1.IsEnabled = false;
-            //buttonChoosePlayer2.IsEnabled = false;
-            //buttonChoosePlayer3.IsEnabled = false;
+            buttonDisable();
             handDisplay();
             getAiHandSizes();
             updateScore();
@@ -607,66 +472,12 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void buttonChoosePlayer3_Click(object sender, RoutedEventArgs e)
         {
-            if (players[3].checkHand(currentCard))
-            {
-                players[0].removeCard(currentCard);
-                players[3].removeCard(currentCard);
-                players[0].addToScore();
-            }
-            else
-            {
-                MessageBox.Show("GO FISH!");
-                if (!deck.isEmpty())
-                {
-                    Card drawnCard = deck.drawCard();
-                    if (players[0].checkHand(drawnCard))
-                    {
-                        players[0].removeCard(drawnCard);
-                        players[0].addToScore();
-                    }
-                    else
-                    {
-                        players[0].addCard(drawnCard);
-                    }
-                }
-            }
-            if (players[0].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i< 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[0].addCard(deck.drawCard());
-                        }
-                    }                   
-                }
-            }
-            if (players[3].isHandEmpty())
-            {
-                // Draw new hand if deck has cards 
-                if (!deck.isEmpty())
-                {
-                    // Draw new hand
-                    for (int i = 0; i < 7; i++)
-                    {
-                        // Check if deck if empty
-                        if (!deck.isEmpty())
-                        {
-                            players[3].addCard(deck.drawCard());
-                        }
-                    }
-                }
-            }
+            selectPlayer(1);
+            fillHandIfEmpty(0);
+            fillHandIfEmpty(3);           
             InitCheckHand();
             checkGameOver();
-            buttonChoosePlayer1.IsEnabled = false;
-            //buttonChoosePlayer2.IsEnabled = false;
-            //buttonChoosePlayer3.IsEnabled = false;
+            buttonDisable();
             handDisplay();
             updateScore();
             getAiHandSizes();
@@ -682,7 +493,86 @@ namespace Group5OOP4200GroupProject
             playerScoreLabel.Content = "Score: " + players[0].getScore();
             ai1ScoreLabel.Content = "Score: " + players[1].getScore();
         }
+        private void fillHandIfEmpty(int p)
+        {
+            if (players[p].isHandEmpty())
+            {
+                // Draw new hand if deck has cards 
+                if (!deck.isEmpty())
+                {
+                    // Draw new hand
+                    for (int i = 0; i < 7; i++)
+                    {
+                        // Check if deck if empty
+                        if (!deck.isEmpty())
+                        {
+                            players[p].addCard(deck.drawCard());
+                        }
+                    }
+                }
+            }
+        }
+        private void selectPlayer(int p)
+        {
+            if (players[p].checkHand(currentCard))
+            {
+                players[0].removeCard(currentCard);
+                players[p].removeCard(currentCard);
+                players[0].addToScore();
+                MessageBox.Show("Player " + p + " had a " + currentCard.cardValue + ". You gain a point.");
+            }
+            else
+            {
+                MessageBox.Show("GO FISH!");
+                if (!deck.isEmpty())
+                {
+                    Card drawnCard = deck.drawCard();
 
+                    if (players[0].checkHand(drawnCard))
+                    {
+                        players[0].removeCard(drawnCard);
+                        players[0].addToScore();
+                        MessageBox.Show("You drew a " + drawnCard.cardValue + ". You now have a pair and you gain a point.");
+                    }
+                    else
+                    {
+                        players[0].addCard(drawnCard);
+                        MessageBox.Show("You drew a " + drawnCard.cardValue);
+                    }
+                }
+            }
+        }
+        private void buttonDisable()
+        {
+            buttonChoosePlayer1.IsEnabled = false;
+
+            if (players.Count >= 3)
+            {
+                buttonChoosePlayer2.IsEnabled = false;
+            }
+            if (players.Count == 4)
+            {
+                buttonChoosePlayer3.IsEnabled = false;
+            }
+        }
+        private void buttonEnable()
+        {
+            buttonChoosePlayer1.IsEnabled = true;
+
+            if (players.Count >= 3)
+            {
+                buttonChoosePlayer2.IsEnabled = true;
+            }
+            if (players.Count == 4)
+            {
+                buttonChoosePlayer3.IsEnabled = true;
+            }
+        }
+        private void selectCard(int c)
+        {
+            currentCard = players[0].getCardByIndex(c);
+            cardLabel.Content = currentCard.cardValue + " of " + currentCard.cardSuit;
+        }
         /// <summary>
         /// Changes images of hand to match player hand
         /// </summary>
