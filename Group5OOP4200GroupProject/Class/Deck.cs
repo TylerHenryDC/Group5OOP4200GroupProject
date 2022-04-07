@@ -78,6 +78,23 @@ namespace Group5OOP4200GroupProject.Class
         }
 
         /// <summary>
+        /// Addes a hands worth of cards to player hand
+        /// </summary>
+        /// <param name="player">Player who is drawing</param>
+        public void drawHand(ref Player player)
+        {
+            // Loop through equal to hand size
+            for (int i = 0; i < numOfCards; i++)
+            {
+                // Make sure there are cards before drawing
+                if (!this.isEmpty())
+                {
+                    player.addCard(this.drawCard());
+                }
+            }
+        }
+
+        /// <summary>
         /// Check for an empty deck
         /// </summary>
         /// <returns>True if empty. False if not</returns>
