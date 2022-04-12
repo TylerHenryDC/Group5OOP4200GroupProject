@@ -67,7 +67,7 @@ namespace Group5OOP4200GroupProject
 
                             player.removeCard(cardToRemove);
                             player.removeCard(cardToRemove);
-                            MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
+                            MessageBox.Show("Player " + (i + 1) + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
                             player.addToScore();
                         }
                     }
@@ -559,7 +559,7 @@ namespace Group5OOP4200GroupProject
                 players[0].removeCard(currentCard);
                 players[p].removeCard(currentCard);
                 players[0].addToScore();
-                MessageBox.Show("Player " + p + " had a " + currentCard.cardValue + ". You gain a point.");
+                MessageBox.Show("Player " + (p+1) + " had a " + currentCard.cardValue + ". You gain a point.");
             }
             else
             {
