@@ -27,7 +27,7 @@ namespace Group5OOP4200GroupProject
         Card currentCard = new Card();
         int numOfAI;
         Enums.difficulty difficulty;
-        bool isRunning = false;
+        
         public GameWindow(int numAi, Enums.difficulty diff)
         {
             InitializeComponent();
@@ -50,17 +50,16 @@ namespace Group5OOP4200GroupProject
             deck.deal(ref players);
             handDisplay();
             getAiHandSizes();
-            isRunning = true;
         }
 
         private void windowLoaded(object sender, RoutedEventArgs e)
         {
-            InitCheckHand();
+            CheckHand();
             handDisplay();
             getAiHandSizes();
         }
 
-        public void InitCheckHand()
+        public void CheckHand()
         {
             foreach (Player player in players)
             {
@@ -74,10 +73,9 @@ namespace Group5OOP4200GroupProject
 
                             player.removeCard(cardToRemove);
                             player.removeCard(cardToRemove);
-                            if (isRunning)
-                            {
-                                MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
-                            }
+     
+                            MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
+
                             player.addToScore();
                         }
                     }
@@ -272,7 +270,7 @@ namespace Group5OOP4200GroupProject
                         checkGameOver();
                         handDisplay();
                         getAiHandSizes();
-                        InitCheckHand();
+                        CheckHand();
                         deckImageSize();
                     }
                 }
@@ -463,7 +461,7 @@ namespace Group5OOP4200GroupProject
             selectPlayer(1);
             fillHandIfEmpty(0);
             fillHandIfEmpty(1);
-            InitCheckHand();
+            CheckHand();
             checkGameOver();
             buttonDisable();
             handDisplay();
@@ -485,7 +483,7 @@ namespace Group5OOP4200GroupProject
             selectPlayer(2);
             fillHandIfEmpty(0);
             fillHandIfEmpty(2);
-            InitCheckHand();
+            CheckHand();
             checkGameOver();
             buttonDisable();
             handDisplay();
@@ -505,7 +503,7 @@ namespace Group5OOP4200GroupProject
             selectPlayer(1);
             fillHandIfEmpty(0);
             fillHandIfEmpty(3);           
-            InitCheckHand();
+            CheckHand();
             checkGameOver();
             buttonDisable();
             handDisplay();
