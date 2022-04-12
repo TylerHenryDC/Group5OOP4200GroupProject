@@ -464,6 +464,7 @@ namespace Group5OOP4200GroupProject
             fillHandIfEmpty(0);
             fillHandIfEmpty(1);
             CheckHand();
+            fillHandIfEmpty(0);
             checkGameOver();
             buttonDisable();
             handDisplay();
@@ -486,6 +487,7 @@ namespace Group5OOP4200GroupProject
             fillHandIfEmpty(0);
             fillHandIfEmpty(2);
             CheckHand();
+            fillHandIfEmpty(0);
             checkGameOver();
             buttonDisable();
             handDisplay();
@@ -502,10 +504,11 @@ namespace Group5OOP4200GroupProject
         /// <param name="e"></param>
         private void buttonChoosePlayer3_Click(object sender, RoutedEventArgs e)
         {
-            selectPlayer(1);
+            selectPlayer(3);
             fillHandIfEmpty(0);
             fillHandIfEmpty(3);           
             CheckHand();
+            fillHandIfEmpty(0);
             checkGameOver();
             buttonDisable();
             handDisplay();
