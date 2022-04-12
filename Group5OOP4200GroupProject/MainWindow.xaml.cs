@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Group5OOP4200GroupProject.Class;
 
 namespace Group5OOP4200GroupProject
 {
@@ -20,9 +21,13 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        Enums.difficulty difficulty;
+        int players;
         public MainWindow()
         {
             InitializeComponent();
+            players = 1;
+            difficulty = Enums.difficulty.Easy;
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
@@ -40,8 +45,37 @@ namespace Group5OOP4200GroupProject
         private void playButton_Click(object sender, RoutedEventArgs e)
         {
             
-            GameWindow gw = new GameWindow();
+            GameWindow gw = new GameWindow(players, difficulty);
             gw.ShowDialog();
+        }
+
+        private void radioCheckPlayer1(object sender, RoutedEventArgs e)
+        {
+            players = 1;
+        }
+
+        private void radioCheckPlayer2(object sender, RoutedEventArgs e)
+        {
+            players = 2;
+        }
+
+        private void radioCheckPlayer3(object sender, RoutedEventArgs e)
+        {
+            players = 3;
+        }
+
+        private void radioCheckEasy(object sender, RoutedEventArgs e)
+        {
+            difficulty = Enums.difficulty.Easy;
+        }
+        private void radioCheckMedium(object sender, RoutedEventArgs e)
+        {
+            difficulty = Enums.difficulty.Medium;
+        }
+
+        private void radioCheckHard(object sender, RoutedEventArgs e)
+        {
+            difficulty = Enums.difficulty.Hard;
         }
     }
 }

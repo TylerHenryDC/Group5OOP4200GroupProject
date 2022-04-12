@@ -80,13 +80,13 @@
                VerticalAlignment="Top" Height="87" Width="204" 
                />
         <Label Content="Number Of Opponents:" HorizontalAlignment="Left" Height="42" Margin="70,229,0,0" VerticalAlignment="Top" Width="261"/>
-        <RadioButton Content="1 Player" HorizontalAlignment="Left" Margin="331,238,0,0" VerticalAlignment="Top" />
-        <RadioButton Content="2 Players" HorizontalAlignment="Left" Margin="331,297,0,0" VerticalAlignment="Top" />
-        <RadioButton Content="3 Players" HorizontalAlignment="Left" Margin="331,353,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="1 Player" HorizontalAlignment="Left" Margin="331,238,0,0" VerticalAlignment="Top" GroupName="playerNum" Checked="radioCheckPlayer1" IsChecked="True" />
+        <RadioButton Content="2 Players" HorizontalAlignment="Left" Margin="331,297,0,0" VerticalAlignment="Top" GroupName="playerNum" Checked="radioCheckPlayer2" />
+        <RadioButton Content="3 Players" HorizontalAlignment="Left" Margin="331,353,0,0" VerticalAlignment="Top" GroupName="playerNum" Checked="radioCheckPlayer3" />
         <Label Content="Select Difficulty:" HorizontalAlignment="Left" Height="42" Margin="489,231,0,0" VerticalAlignment="Top" Width="184"/>
-        <RadioButton Content="Easy" HorizontalAlignment="Left" Margin="684,236,0,0" VerticalAlignment="Top" />
-        <RadioButton Content="Normal" HorizontalAlignment="Left" Margin="684,295,0,0" VerticalAlignment="Top" />
-        <RadioButton Content="Hard" HorizontalAlignment="Left" Margin="684,346,0,0" VerticalAlignment="Top" />
+        <RadioButton Content="Easy" HorizontalAlignment="Left" Margin="684,236,0,0" VerticalAlignment="Top" GroupName="difficulty" Checked="radioCheckEasy" IsChecked="True" />
+        <RadioButton Content="Normal" HorizontalAlignment="Left" Margin="684,295,0,0" VerticalAlignment="Top" GroupName="difficulty" Checked="radioCheckMedium" />
+        <RadioButton Content="Hard" HorizontalAlignment="Left" Margin="684,346,0,0" VerticalAlignment="Top" GroupName="difficulty" Checked="radioCheckHard" />
 
 
     </Grid>

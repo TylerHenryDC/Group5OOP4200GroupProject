@@ -25,7 +25,7 @@ namespace Group5OOP4200GroupProject
         public int userScore;
         public int ai1Score;
         Card currentCard = new Card();
-        public GameWindow()
+        public GameWindow(int numAi, Enums.difficulty diff)
         {
             InitializeComponent();
 
@@ -35,8 +35,13 @@ namespace Group5OOP4200GroupProject
 
             // Create new players and add to collection
             var Player1 = new Player(1);
-            var Player2 = new AI(2, Enums.difficulty.Hard);
-            players = new List<Player> { Player1, Player2 };
+            players = new List<Player> { Player1 };
+
+            for (int i = 1; i <= numAi; i++)
+            {
+                var ai = new AI(i + 1, diff);
+                players.Add(ai);
+            }
 
             deck.deal(ref players);
             InitCheckHand();
