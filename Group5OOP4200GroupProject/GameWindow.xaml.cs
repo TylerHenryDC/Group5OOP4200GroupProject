@@ -33,7 +33,7 @@ namespace Group5OOP4200GroupProject
             deck = new Deck();
             deck.shuffle();
 
-            // Create new players and add to collection
+            // Create new player and collection
             var Player1 = new Player(1);
             players = new List<Player> { Player1 };
 
@@ -147,15 +147,15 @@ namespace Group5OOP4200GroupProject
                             // Get that player and card
                             playerToAsk = player.getPlayFromMemory(players, memoryIndex);
                             cardToAsk = player.getCardFromMemory(memoryIndex);
+                            MessageBox.Show("Memory Ask: " + player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
                         }
                         else
                         {
                             // Get random player and card
                             playerToAsk = player.pickRandomPlayer(players);
                             cardToAsk = player.pickRandomCard();
+                            MessageBox.Show("Random Ask: " + player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
                         }
-
-                        MessageBox.Show(player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
 
                         // Check if payer has card in hand
                         if (playerToAsk.checkHand(cardToAsk))

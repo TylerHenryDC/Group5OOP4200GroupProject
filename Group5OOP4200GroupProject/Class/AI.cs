@@ -140,7 +140,9 @@ namespace Group5OOP4200GroupProject.Class
         /// <returns></returns>
         public Player getPlayFromMemory(List<Player> players, int memoryIndex)
         {
-            return players.Find(x => x.ID == playerAsked[memoryIndex]);
+            Player player = players.Find(x => x.ID == playerAsked[memoryIndex]);
+            playerAsked.RemoveAt(memoryIndex);
+            return player;
         }
 
         /// <summary>
@@ -150,7 +152,9 @@ namespace Group5OOP4200GroupProject.Class
         /// <returns></returns>
         public Card getCardFromMemory(int memoryIndex)
         {
-            return hand.Find(x => x.cardValue == valueAsked[memoryIndex]);
+            Card card = hand.Find(x => x.cardValue == valueAsked[memoryIndex]);
+            valueAsked.RemoveAt(memoryIndex);
+            return card;
         }
     }
 }
