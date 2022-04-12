@@ -109,9 +109,9 @@ namespace Group5OOP4200GroupProject.Class
             else if (this.cardSuit == Enums.suit.Diamonds) 
             {
                 // ACE
-                if(this.cardValue == Enums.value.Ace) 
+                if (this.cardValue == Enums.value.Ace)
                 {
-                    return "./Images/Cards/Ad.png";
+                    return "./Images/Cards/Ac.png";
                 }
                 // TWO
                 else if (this.cardValue == Enums.value.Two) 
@@ -312,7 +312,7 @@ namespace Group5OOP4200GroupProject.Class
                     return "./Images/Cards/Ks.png";
                 }
             }
-           return "";
+           return "/Images/Cards/";
         }
      
     }
