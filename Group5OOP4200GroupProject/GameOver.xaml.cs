@@ -20,9 +20,13 @@ namespace Group5OOP4200GroupProject
     /// </summary>
     public partial class GameOver : Window
     {
-        public GameOver(List<int> Scores)
+        int numOfAI;
+        Enums.difficulty difficulty;
+        public GameOver(List<int> Scores, int numAI, Enums.difficulty diff)
         {
             InitializeComponent();
+            numOfAI = numAI;
+            difficulty = diff;
             userScoreLabel.Content = "User Score: " + Scores[0];
             ai1ScoreLabel.Content = "Ai1 Score: " + Scores[1];
             if(Scores.Count >= 3)
@@ -44,7 +48,7 @@ namespace Group5OOP4200GroupProject
         private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            GameWindow gw = new GameWindow();
+            GameWindow gw = new GameWindow(numOfAI, difficulty);
             gw.ShowDialog();
         }
 
