@@ -25,10 +25,13 @@ namespace Group5OOP4200GroupProject
         public int userScore;
         public int ai1Score;
         Card currentCard = new Card();
+        int numOfAI;
+        Enums.difficulty difficulty;
         public GameWindow(int numAi, Enums.difficulty diff)
         {
             InitializeComponent();
-
+            numOfAI = numAi;
+            difficulty = diff;
             // Create new Deck and shuffle
             deck = new Deck();
             deck.shuffle();
@@ -191,17 +194,6 @@ namespace Group5OOP4200GroupProject
                         }
                         else
                         {
-                            // Other AI needs to remember this failed request
-                            foreach (AI otherAI in players)
-                            {
-                                // Check for type AI and that it isn't the asking AI
-                                if (otherAI is AI && otherAI != player)
-                                {
-                                    // Add the asking AI and card to memory
-                                    otherAI.addToMemory(player, cardToAsk);
-                                }
-                            }
-
                             // Check deck
                             if (!deck.isEmpty())
                             {
@@ -238,6 +230,29 @@ namespace Group5OOP4200GroupProject
                                 {
                                     // Add the card to hand
                                     player.addCard(drawnCard);
+                                    // Other AI needs to remember this failed request
+                                    foreach (AI otherAI in ais)
+                                    {
+                                        // Check for type AI and that it isn't the asking AI
+                                        if (otherAI is AI && otherAI != player)
+                                        {
+                                            // Add the asking AI and card to memory
+                                            otherAI.addToMemory(player, cardToAsk);
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                // Other AI needs to remember this failed request
+                                foreach (AI otherAI in ais)
+                                {
+                                    // Check for type AI and that it isn't the asking AI
+                                    if (otherAI is AI && otherAI != player)
+                                    {
+                                        // Add the asking AI and card to memory
+                                        otherAI.addToMemory(player, cardToAsk);
+                                    }
                                 }
                             }
                         }
@@ -413,7 +428,7 @@ namespace Group5OOP4200GroupProject
                 }
                 if (gameOver == true)
                 {
-                    GameOver go = new GameOver(grabScores());
+                    GameOver go = new GameOver(grabScores(), numOfAI, difficulty);
                     go.ShowDialog();
                     this.Close();
                 }
@@ -529,8 +544,9 @@ namespace Group5OOP4200GroupProject
             else
             {
                 MessageBox.Show("GO FISH!");
+                List<AI> ais = players.OfType<AI>().ToList();
                 // Add the failed asked to ai memory
-                foreach (AI aiPlayer in players)
+                foreach (AI aiPlayer in ais)
                 {
                     if (aiPlayer is AI)
                     {
