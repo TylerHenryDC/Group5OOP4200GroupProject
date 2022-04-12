@@ -273,6 +273,10 @@ namespace Group5OOP4200GroupProject
                     }
                 }
             }
+            if (players[0].getHandSize() == 0)
+            {
+                runAITurns();
+            }
         }
 
         /// <summary>
