@@ -510,11 +510,11 @@ namespace Group5OOP4200GroupProject
 
             if (players.Count >= 3)
             {
-                ai1HandSizeLabel.Content = players[2].getHandSize();
+                ai2HandSizeLabel.Content = players[2].getHandSize();
             }
             if (players.Count == 4)
             {
-                ai1HandSizeLabel.Content = players[3].getHandSize();
+                ai3HandSizeLabel.Content = players[3].getHandSize();
             }
         }
         private void updateScore()
