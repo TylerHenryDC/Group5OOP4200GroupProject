@@ -492,11 +492,31 @@ namespace Group5OOP4200GroupProject
         private void getAiHandSizes()
         {
             ai1HandSizeLabel.Content = players[1].getHandSize();
+
+            if (players.Count >= 3)
+            {
+                ai1HandSizeLabel.Content = players[2].getHandSize();
+            }
+            if (players.Count == 4)
+            {
+                ai1HandSizeLabel.Content = players[3].getHandSize();
+            }
         }
         private void updateScore()
         {
             playerScoreLabel.Content = "Score: " + players[0].getScore();
             ai1ScoreLabel.Content = "Score: " + players[1].getScore();
+
+            if (players.Count >= 3)
+            {
+                ai2ScoreLabel.Content = "Score: " + players[2].getScore();
+            }
+            if (players.Count == 4)
+            {
+                ai3ScoreLabel.Content = "Score: " + players[3].getScore();
+            }
+
+
         }
         private void fillHandIfEmpty(int p)
         {
@@ -570,15 +590,24 @@ namespace Group5OOP4200GroupProject
         }
         private void buttonEnable()
         {
-            buttonChoosePlayer1.IsEnabled = true;
+            if (players[1].getHandSize() > 0)
+            {
+                buttonChoosePlayer1.IsEnabled = true;
+            }
 
             if (players.Count >= 3)
             {
-                buttonChoosePlayer2.IsEnabled = true;
+                if (players[2].getHandSize() > 0)
+                {
+                    buttonChoosePlayer2.IsEnabled = true;
+                }
             }
             if (players.Count == 4)
             {
-                buttonChoosePlayer3.IsEnabled = true;
+                if (players[3].getHandSize() > 0)
+                {
+                    buttonChoosePlayer3.IsEnabled = true;
+                }
             }
         }
         private void selectCard(int c)
