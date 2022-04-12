@@ -27,6 +27,7 @@ namespace Group5OOP4200GroupProject
         Card currentCard = new Card();
         int numOfAI;
         Enums.difficulty difficulty;
+        bool isRunning = false;
         public GameWindow(int numAi, Enums.difficulty diff)
         {
             InitializeComponent();
@@ -47,10 +48,16 @@ namespace Group5OOP4200GroupProject
             }
 
             deck.deal(ref players);
+            handDisplay();
+            getAiHandSizes();
+            isRunning = true;
+        }
+
+        private void windowLoaded(object sender, RoutedEventArgs e)
+        {
             InitCheckHand();
             handDisplay();
             getAiHandSizes();
-
         }
 
         public void InitCheckHand()
@@ -67,7 +74,10 @@ namespace Group5OOP4200GroupProject
 
                             player.removeCard(cardToRemove);
                             player.removeCard(cardToRemove);
-                            MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
+                            if (isRunning)
+                            {
+                                MessageBox.Show("Player " + i + " has a pair of " + cardToRemove.cardValue + "'s. They gain a point.");
+                            }
                             player.addToScore();
                         }
                     }
@@ -731,6 +741,8 @@ namespace Group5OOP4200GroupProject
             }
 
         }
+
+        
     }
         
 }
