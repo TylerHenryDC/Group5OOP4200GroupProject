@@ -206,7 +206,7 @@ namespace Group5OOP4200GroupProject
                                 // Draw a card
                                 Card drawnCard = deck.drawCard();
 
-                                MessageBox.Show(player.ID + " drew a " + drawnCard.cardValue);
+                                //MessageBox.Show(player.ID + " drew a " + drawnCard.cardValue);
 
                                 // Check if card is in asking palyers hand
                                 if (player.checkHand(drawnCard))
