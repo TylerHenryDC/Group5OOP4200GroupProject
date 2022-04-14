@@ -1,6 +1,7 @@
 ﻿/*
  * Name: Arsalan Arif Radhu, Irina Nazarova
  * Date: 14 April 2022
+ * Description: Window which show the Guide to the game.
  */
 using System.Windows;
 
