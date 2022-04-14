@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-
+/// <summary>
+/// Author: Nicholas Shortt
+/// Desc  :
+///  Child of the Player class that represents computer players.
+///  Contains methods to simulate user interaction but 
+///  done through automation
+/// </summary>
 namespace Group5OOP4200GroupProject.Class
 {
     class AI : Player
@@ -139,6 +145,7 @@ namespace Group5OOP4200GroupProject.Class
         /// <returns></returns>
         public Player getPlayFromMemory(List<Player> players, int memoryIndex)
         {
+            // Save player then remove the index value from memeory
             Player player = players.Find(x => x.ID == playerAsked[memoryIndex]);
             playerAsked.RemoveAt(memoryIndex);
             return player;
@@ -151,6 +158,7 @@ namespace Group5OOP4200GroupProject.Class
         /// <returns></returns>
         public Card getCardFromMemory(int memoryIndex)
         {
+            // Save the card then remove the index value from memeory
             Card card = hand.Find(x => x.cardValue == valueAsked[memoryIndex]);
             valueAsked.RemoveAt(memoryIndex);
             return card;

@@ -119,134 +119,127 @@ namespace Group5OOP4200GroupProject
                 deckLayer5.Visibility = Visibility.Hidden;
             }
         }
+
         /// <summary>
-        /// Runs through the AI player turns
+        /// Runs through the AI player turns.
+        /// 1. Makie sure they have a card.
+        /// 2. Determine card and player to ask
+        /// 3. Ask player and remove card or drawing from deck baseed on response
         /// </summary>
         private void runAITurns()
         {
+            // Get all AI object from player list
             List<AI> ais = players.OfType<AI>().ToList();
 
             // Go through players collection
             foreach (AI player in ais)
-            {
-                // Only for AI players
-                if (player is AI)
+            {         
+                // While they have cards or till turn is done
+                if (!player.isHandEmpty())
                 {
-                    // While they have cards or till turn is done
-                    if (!player.isHandEmpty())
-                    {
-                        // Create object for asking
-                        Player playerToAsk;
-                        Card cardToAsk;
+                    // Create object for asking
+                    Player playerToAsk;
+                    Card cardToAsk;
 
-                        // Check the player memory
-                        int memoryIndex = player.compareHandToMemory();
+                    // Check the player memory
+                    int memoryIndex = player.compareHandToMemory();
                         
-                        // If something is found in memory
-                        if (memoryIndex >= 0)
-                        {
-                            // Get that player and card
-                            playerToAsk = player.getPlayFromMemory(players, memoryIndex);
-                            cardToAsk = player.getCardFromMemory(memoryIndex);
-                            MessageBox.Show("Memory Ask: " + player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
-                        }
-                        else
-                        {
-                            // Get random player and card
-                            playerToAsk = player.pickRandomPlayer(players);
-                            cardToAsk = player.pickRandomCard();
-                            MessageBox.Show("Random Ask: " + player.ID + " asked " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
-                        }
+                    // If something is found in memory
+                    if (memoryIndex >= 0)
+                    {
+                        // Get that player and card
+                        playerToAsk = player.getPlayFromMemory(players, memoryIndex);
+                        cardToAsk = player.getCardFromMemory(memoryIndex);
+                    }
+                    else
+                    {
+                        // Get random player and card
+                        playerToAsk = player.pickRandomPlayer(players);
+                        cardToAsk = player.pickRandomCard();
+                    }
 
-                        // Check if payer has card in hand
-                        if (playerToAsk.checkHand(cardToAsk))
+                    // Ask Dialoge
+                    MessageBox.Show("Player " + player.ID + " asked Player " + playerToAsk.ID + " for a " + cardToAsk.cardValue);
+
+                    // Check if payer has card in hand
+                    if (playerToAsk.checkHand(cardToAsk))
+                    {
+                        // Remove card form  both players hand
+                        player.removeCard(cardToAsk);
+                        playerToAsk.removeCard(cardToAsk);
+                        // Increase score of asking player
+                        player.addToScore();
+
+                        // Check for empty hand
+                        if (player.isHandEmpty())
                         {
-                            // Remove card form  both players hand
-                            player.removeCard(cardToAsk);
-                            playerToAsk.removeCard(cardToAsk);
-                            // Increase score of asking player
-                            player.addToScore();
-
-                            // Check for empty hand
-                            if (player.isHandEmpty())
-                            {
-                                // Draw new hand if deck has cards 
-                                if (!deck.isEmpty())
-                                {
-                                    // Copy the AI player and draw new hand
-                                    Player drawPlayer = player;
-                                    deck.drawHand(ref drawPlayer);
-                                }
-                            }
-
-                            // Check for empty hand
-                            if (playerToAsk.isHandEmpty())
-                            {
-                                // Draw new hand if deck has cards 
-                                if (!deck.isEmpty())
-                                {
-                                    deck.drawHand(ref playerToAsk);
-
-                                }
-                            }
-                        }
-                        else
-                        {
-                            // Check deck
+                            // Draw new hand if deck has cards 
                             if (!deck.isEmpty())
                             {
-                                // Draw a card
-                                Card drawnCard = deck.drawCard();
+                                // Copy the AI player and draw new hand
+                                Player drawPlayer = player;
+                                deck.drawHand(ref drawPlayer);
+                            }
+                        }
 
-                                MessageBox.Show(player.ID + " drew a card." );
+                        // Check for empty hand
+                        if (playerToAsk.isHandEmpty())
+                        {
+                            // Draw new hand if deck has cards 
+                            if (!deck.isEmpty())
+                            {
+                                deck.drawHand(ref playerToAsk);
 
-                                // Check if card is in asking palyers hand
-                                if (player.checkHand(drawnCard))
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Check deck
+                        if (!deck.isEmpty())
+                        {
+                            // Draw a card
+                            Card drawnCard = deck.drawCard();
+
+                            // Check if card is in asking palyers hand
+                            if (player.checkHand(drawnCard))
+                            {
+                                // Draw a pair message
+                                MessageBox.Show("Player" + player.ID + " drew a "+ drawnCard.cardValue + " and had one in hand.");
+
+                                // Remove the card from hand and increase score
+                                player.removeCard(drawnCard);
+                                player.addToScore();
+
+
+                                // Check for empty hand
+                                if (player.isHandEmpty())
                                 {
-                                    // Remove the card from hand and increase score
-                                    player.removeCard(drawnCard);
-                                    player.addToScore();
-
-
-                                    // Check for empty hand
-                                    if (player.isHandEmpty())
+                                    // Draw new hand if deck has cards 
+                                    if (!deck.isEmpty())
                                     {
                                         // Draw new hand if deck has cards 
                                         if (!deck.isEmpty())
                                         {
-                                            // Draw new hand if deck has cards 
-                                            if (!deck.isEmpty())
-                                            {
-                                                // Copy the AI player and draw new hand
-                                                Player drawPlayer = player;
-                                                deck.drawHand(ref drawPlayer);
-                                            }
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    // Add the card to hand
-                                    player.addCard(drawnCard);
-                                    // Other AI needs to remember this failed request
-                                    foreach (AI otherAI in ais)
-                                    {
-                                        // Check for type AI and that it isn't the asking AI
-                                        if (otherAI is AI && otherAI != player)
-                                        {
-                                            // Add the asking AI and card to memory
-                                            otherAI.addToMemory(player, cardToAsk);
+                                            // Copy the AI player and draw new hand
+                                            Player drawPlayer = player;
+                                            deck.drawHand(ref drawPlayer);
                                         }
                                     }
                                 }
                             }
                             else
                             {
+                                // Draw not match dialoge
+                                MessageBox.Show("Player " + player.ID + " drew a card.");
+
+                                // Add the card to hand
+                                player.addCard(drawnCard);
                                 // Other AI needs to remember this failed request
                                 foreach (AI otherAI in ais)
                                 {
                                     // Check for type AI and that it isn't the asking AI
-                                    if (otherAI is AI && otherAI != player)
+                                    if (otherAI != player)
                                     {
                                         // Add the asking AI and card to memory
                                         otherAI.addToMemory(player, cardToAsk);
@@ -254,17 +247,32 @@ namespace Group5OOP4200GroupProject
                                 }
                             }
                         }
-
-                        // Turn Wrap Up
-                        updateScore();
-                        checkGameOver();
-                        handDisplay();
-                        getAiHandSizes();
-                        CheckHand();
-                        deckImageSize();
+                        else
+                        {
+                            // Other AI needs to remember this failed request
+                            foreach (AI otherAI in ais)
+                            {
+                                // Check for type AI and that it isn't the asking AI
+                                if (otherAI != player)
+                                {
+                                    // Add the asking AI and card to memory
+                                    otherAI.addToMemory(player, cardToAsk);
+                                }
+                            }
+                        }
                     }
+
+                    // Turn Wrap Up
+                    updateScore();
+                    checkGameOver();
+                    handDisplay();
+                    getAiHandSizes();
+                    CheckHand();
+                    deckImageSize();
                 }
+                
             }
+            // When player has no cards keep running AI turns
             if (players[0].getHandSize() == 0)
             {
                 runAITurns();
@@ -573,10 +581,7 @@ namespace Group5OOP4200GroupProject
                 // Add the failed asked to ai memory
                 foreach (AI aiPlayer in ais)
                 {
-                    if (aiPlayer is AI)
-                    {
-                        aiPlayer.addToMemory(players[0], currentCard);
-                    }
+                    aiPlayer.addToMemory(players[0], currentCard); 
                 }
                 if (!deck.isEmpty())
                 {
