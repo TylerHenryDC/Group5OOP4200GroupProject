@@ -22,6 +22,12 @@ namespace Group5OOP4200GroupProject
     {
         int numOfAI;
         Enums.difficulty difficulty;
+        /// <summary>
+        ///  Displays the scores of the user and AI
+        /// </summary>
+        /// <param name="Scores"></param>
+        /// <param name="numAI"></param>
+        /// <param name="diff"></param>
         public GameOver(List<int> Scores, int numAI, Enums.difficulty diff)
         {
             InitializeComponent();
@@ -41,12 +47,22 @@ namespace Group5OOP4200GroupProject
             }
         }
 
+        /// <summary>
+        /// Exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void quitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(1);
             Close();
         }
 
+        /// <summary>
+        /// Launches a new game window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -54,6 +70,11 @@ namespace Group5OOP4200GroupProject
             gw.ShowDialog();
         }
 
+        /// <summary>
+        /// Launches the guide window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void guideButton_Click(object sender, RoutedEventArgs e)
         {
             UserGuideWindow userGuide = new UserGuideWindow();
