@@ -1,4 +1,9 @@
-﻿using System.Windows;
+﻿/*
+ * Name: Arsalan Arif Radhu, Irina Nazarova
+ * Date: 14 April 2022
+ */
+using System.Windows;
+
 
 namespace Group5OOP4200GroupProject
 {
@@ -12,6 +17,11 @@ namespace Group5OOP4200GroupProject
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Closes the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
