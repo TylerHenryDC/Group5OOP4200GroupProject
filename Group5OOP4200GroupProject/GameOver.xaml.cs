@@ -1,6 +1,7 @@
 ﻿/*
  * Author: Arsalan Arif Radhu, Tyler Henry
  * Date: 14 April 2022
+ * Description: Window which shows the final score of the user and AI
  */
 using System;
 using System.Collections.Generic;
