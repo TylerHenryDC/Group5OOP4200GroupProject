@@ -4,7 +4,13 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Group5OOP4200GroupProject.Class;
-
+/// <summary>
+/// Authors: Tyler Henry
+///          Nicholas Shortt
+/// Desc   :
+///  The Window in which the game is played.
+///  Handling turns, scoring, and general gameplay.
+/// </summary>
 namespace Group5OOP4200GroupProject
 {
     /// <summary>
