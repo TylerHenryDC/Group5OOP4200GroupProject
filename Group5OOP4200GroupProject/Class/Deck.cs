@@ -1,10 +1,10 @@
-﻿/*
- *  Author: Tyler Osborne
- *  Date last updated: 2022-04-14
- *  File: Deck.cs
- *  Description:
- *          This the the deck class file, it contains the functionaliity of a deck for our game of go fish.
- */ 
+﻿/// <summary>
+///  Author: Tyler Osborne
+///  Date last updated: 2022-04-14
+///  File: Deck.cs
+///  Description:
+///          This the the deck class file, it contains the functionality of a deck for our game of go fish.
+/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Linq;

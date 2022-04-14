@@ -1,10 +1,10 @@
-﻿/*
- *  Author: Tyler Osborne
- *  Date last updated: 2022-04-14
- *  File: Player.cs
- *  Description:
- *          This is the player class file, it contains the functionality of a player within our game of go fish.
- */
+﻿/// <summary>
+///  Author: Tyler Osborne
+///  Date last updated: 2022-04-14
+///  File: Player.cs
+///  Description:
+///          This is the player class file, it contains the functionality of a player within our game of go fish.
+/// </summary>
 using System;
 using System.Collections.Generic;
 

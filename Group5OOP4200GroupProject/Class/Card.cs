@@ -1,4 +1,11 @@
-﻿using System;
+﻿/// <summary>
+///  Author: Tyler Osborne & Irina Nazarova
+///  Date last updated: 2022-04-14
+///  File: Card.cs
+///  Description:
+///          This is the Card class file, it contains the functionality of a card within our game of gold fish.
+/// </summary>
+using System;
 
 namespace Group5OOP4200GroupProject.Class
 {
@@ -7,13 +14,15 @@ namespace Group5OOP4200GroupProject.Class
 
         
         //              Class attributes
-        //Card suit
+        // Card suit
         public Enums.suit cardSuit { get; set; }
-        //Card number (card value)
+        // Card number (card value)
         public Enums.value cardValue { get; set; }
         
+
+
         //              Constructors
-        //Card class default constructor
+        // Card class default constructor
         public Card()
         {
 
@@ -29,6 +38,9 @@ namespace Group5OOP4200GroupProject.Class
 
         }
 
+
+
+        //              Functions
         // Returns the path to the image for the card (MAY NOT BE WORKING YET)
         public String getCardImage() 
         {
