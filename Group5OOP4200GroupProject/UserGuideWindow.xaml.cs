@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * Name: Arsalan Arif Radhu, Irina Nazarova
+ * Date: 14 April 2022
+ */
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace Group5OOP4200GroupProject
 {
@@ -24,6 +17,11 @@ namespace Group5OOP4200GroupProject
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Closes the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playAgainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
