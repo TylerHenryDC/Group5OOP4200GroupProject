@@ -22,7 +22,7 @@ namespace Group5OOP4200GroupProject
         Enums.difficulty difficulty;
         
         /// <summary>
-        /// Methods to run on lauch
+        /// Creates and runs the gamewindow, methods to run during launch
         /// </summary>
         /// <param name="numAi"></param>
         /// <param name="diff"></param>
