@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *  Author: Tyler Osborne
+ *  Date last updated: 2022-04-14
+ *  File: Player.cs
+ *  Description:
+ *          This is the player class file, it contains the functionality of a player within our game of go fish.
+ */
+using System;
 using System.Collections.Generic;
 
 namespace Group5OOP4200GroupProject.Class
@@ -6,14 +13,14 @@ namespace Group5OOP4200GroupProject.Class
 {
     class Player
     {
-        // Class Variables
-        protected List<Card> hand;
-        protected int id;
-
+        //              Class Variables
+        protected List<Card> hand; // a list that represents the hand of the player
+        protected int id; // ID of the player within the game
         private int score; // Score for the player
 
-        //Constructors
 
+
+        //              Constructors
         /// <summary>
         /// Initialize the player
         /// </summary>
@@ -24,7 +31,17 @@ namespace Group5OOP4200GroupProject.Class
             hand = new List<Card>();
         }
 
-        // Accessor
+
+
+        //              Accessors
+        /// <summary>
+        /// Gets the player id number
+        /// </summary>
+        public int ID
+        {
+            get { return id; }
+        }
+
         /// <summary>
         /// Returns the score of the player
         /// </summary>
@@ -53,8 +70,9 @@ namespace Group5OOP4200GroupProject.Class
             return hand[index];
         }
 
-        // Methods
 
+
+        //              Methods
         /// <summary>
         /// Check if a given card exists in the players hand
         /// </summary>
@@ -70,9 +88,11 @@ namespace Group5OOP4200GroupProject.Class
                 // Checks for a matching card value
                 if (hand[i].cardValue == card.cardValue)
                 {
+                    // Sets found to true
                     found = true;
                 }
             }
+            // Returns if it was found or not
             return found;
         }
 
@@ -114,7 +134,6 @@ namespace Group5OOP4200GroupProject.Class
             hand.Remove(removeCard);
         }
 
-
         /// <summary>
         ///  Adds 1 to the score of the player
         /// </summary>
@@ -137,16 +156,6 @@ namespace Group5OOP4200GroupProject.Class
             }
 
             return playerCards;
-        }
-
-        // Properties
-
-        /// <summary>
-        /// Gets the player id number
-        /// </summary>
-        public int ID
-        {
-            get { return id; }
         }
     }
 }

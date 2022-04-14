@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ *  Author: Tyler Osborne
+ *  Date last updated: 2022-04-14
+ *  File: Deck.cs
+ *  Description:
+ *          This the the deck class file, it contains the functionaliity of a deck for our game of go fish.
+ */ 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,8 +17,12 @@ namespace Group5OOP4200GroupProject.Class
         // A list of cards representing the deck
         private List<Card> cards { get; set; }
 
-        // Constants
+
+
+        //              Constants
         private const int numOfCards = 7; // The number of cards to deal to a player
+
+
 
         //              Constructor
         /// <summary>
@@ -19,8 +30,11 @@ namespace Group5OOP4200GroupProject.Class
         /// </summary>
         public Deck()
         {
+            // Runs the reset function that sets the deck to its default full state
             reset();
         }
+
+
 
         //              Functions
         /// <summary>
@@ -42,6 +56,7 @@ namespace Group5OOP4200GroupProject.Class
         /// </summary>
         public void shuffle()
         {
+            // Randomize order of cards
             cards = cards.OrderBy(c => Guid.NewGuid()).ToList();
         }
 
@@ -50,6 +65,7 @@ namespace Group5OOP4200GroupProject.Class
         /// </summary>
         public void reset()
         {
+            // Sets the deck to have 1 of each card
             cards = Enumerable.Range(1, 4).SelectMany(c => Enumerable.Range(1, 13).
                             Select(newCard => new Card() { cardSuit = (Enums.suit)c, cardValue = (Enums.value)newCard })).ToList();
         }
@@ -87,6 +103,7 @@ namespace Group5OOP4200GroupProject.Class
                 // Make sure there are cards before drawing
                 if (!this.isEmpty())
                 {
+                    // Adds the card to the players hand and removes it from the deck
                     player.addCard(this.drawCard());
                 }
             }
