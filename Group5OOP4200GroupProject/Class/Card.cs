@@ -22,13 +22,17 @@ namespace Group5OOP4200GroupProject.Class
 
 
         //              Constructors
-        // Card class default constructor
+        /// <summary>
+        /// Card class default constructor
+        /// </summary>
         public Card()
         {
 
         }
 
-        //Card class parametrized constructor
+        /// <summary>
+        /// Card class parametrized constructor
+        /// </summary>
         public Card(Enums.suit suit, Enums.value card)
         {
             //set card suit
@@ -42,6 +46,10 @@ namespace Group5OOP4200GroupProject.Class
 
         //              Functions
         // Returns the path to the image for the card (MAY NOT BE WORKING YET)
+        /// <summary>
+        /// Gets path to the image for the card that it is called on
+        /// <returns>A string of the path to the image file of the card</returns>
+        /// </summary>
         public String getCardImage() 
         {
             // CLUBS
