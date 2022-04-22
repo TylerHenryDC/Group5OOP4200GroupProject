@@ -248,10 +248,10 @@
         <Label x:Name="ai1HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="22,409,0,0" VerticalAlignment="Top"/>
         <Label x:Name="playerScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="518,591,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ai1ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="ai1CardImage_Copy" HorizontalAlignment="Left"
+        <Image x:Name="ai2CardImage" HorizontalAlignment="Left"
             Margin="306,14,0,0"
             VerticalAlignment="Top" 
-            Height="51" Source="/Images/Cards/backside90.jpg" RenderTransformOrigin="0.5,0.5" Width="70">
+            Height="51" Source="/Images/Cards/backside90.jpg" RenderTransformOrigin="0.5,0.5" Width="70" Visibility="Hidden">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -261,7 +261,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="ai1CardImage_Copy1" HorizontalAlignment="Left"
+        <Image x:Name="ai3CardImage" HorizontalAlignment="Left" Visibility="Hidden"
             Margin="816,420,0,0"
             VerticalAlignment="Top" 
             Height="51" Source="/Images/Cards/backside90.jpg" RenderTransformOrigin="0.5,0.5" Width="70">
@@ -276,8 +276,8 @@
         </Image>
         <Label x:Name="ai2HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="294,22,0,0" VerticalAlignment="Top"/>
         <Label x:Name="ai3HandSizeLabel" Content="" HorizontalAlignment="Left" Margin="800,430,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ai2ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="525,22,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ai3ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="795,239,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ai2ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="525,22,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="ai3ScoreLabel" Content="Score: 0" HorizontalAlignment="Left" Margin="795,239,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
 
 
     </Grid>

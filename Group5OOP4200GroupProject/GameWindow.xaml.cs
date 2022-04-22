@@ -54,7 +54,18 @@ namespace Group5OOP4200GroupProject
                 var ai = new AI(i + 1, diff);
                 players.Add(ai);
             }
+            if (players.Count >= 3)
+            {
+                ai2CardImage.Visibility = Visibility.Visible;
+                ai2ScoreLabel.Visibility = Visibility.Visible;
 
+            }
+            if (players.Count == 4)
+            {
+                ai3CardImage.Visibility = Visibility.Visible;
+                ai3ScoreLabel.Visibility = Visibility.Visible;
+
+            }
             //Deal hand
             deck.deal(ref players);
             handDisplay();
